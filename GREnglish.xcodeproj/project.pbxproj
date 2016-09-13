@@ -14,6 +14,7 @@
 		A6A37D821D879BAB003CEAD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6A37D801D879BAB003CEAD5 /* LaunchScreen.storyboard */; };
 		A6A37D8D1D879BAB003CEAD5 /* GREnglishTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A37D8C1D879BAB003CEAD5 /* GREnglishTests.m */; };
 		A6A37D981D879BAB003CEAD5 /* GREnglishUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A37D971D879BAB003CEAD5 /* GREnglishUITests.m */; };
+		A6A37DC51D87AEEA003CEAD5 /* note.markdown in Sources */ = {isa = PBXBuildFile; fileRef = A6A37DC41D87AEEA003CEAD5 /* note.markdown */; };
 		D5582C0FEE1584325CE0C3C2 /* Pods_GREnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE328CC0C92963C592C3869 /* Pods_GREnglish.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		A6A37D931D879BAB003CEAD5 /* GREnglishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GREnglishUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6A37D971D879BAB003CEAD5 /* GREnglishUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GREnglishUITests.m; sourceTree = "<group>"; };
 		A6A37D991D879BAB003CEAD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6A37DC41D87AEEA003CEAD5 /* note.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = note.markdown; sourceTree = "<group>"; };
 		D8AFF454EF23EFA05AB27714 /* Pods-GREnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GREnglish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GREnglish/Pods-GREnglish.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +161,7 @@
 				A6A37DA61D87A23E003CEAD5 /* Categories */,
 				A6A37DA71D87A23E003CEAD5 /* Model */,
 				A6A37DC11D87A23E003CEAD5 /* Utils */,
+				A6A37DC31D87AEEA003CEAD5 /* Node */,
 				A6A37DC21D87A23E003CEAD5 /* Vender */,
 			);
 			path = Application;
@@ -391,6 +394,14 @@
 			path = Vender;
 			sourceTree = "<group>";
 		};
+		A6A37DC31D87AEEA003CEAD5 /* Node */ = {
+			isa = PBXGroup;
+			children = (
+				A6A37DC41D87AEEA003CEAD5 /* note.markdown */,
+			);
+			path = Node;
+			sourceTree = "<group>";
+		};
 		E96B0A84681AA0AC63946FB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -581,6 +592,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6A37D771D879BAB003CEAD5 /* AppDelegate.m in Sources */,
+				A6A37DC51D87AEEA003CEAD5 /* note.markdown in Sources */,
 				A6A37D741D879BAB003CEAD5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
