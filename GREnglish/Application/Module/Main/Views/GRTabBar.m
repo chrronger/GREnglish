@@ -34,7 +34,7 @@
     [_addButton setImage:IMAGE(@"tabbar_publish_icon_selected") forState:UIControlStateHighlighted];
 
     _addButton.center = CGPointMake(SCREEN_WIDTH/2, 49*0.5-8);
-    _addButton.size = CGSizeMake(SCREEN_WIDTH/5, SCREEN_WIDTH/5);
+//    _addButton.size = CGSizeMake(SCREEN_WIDTH/5, SCREEN_WIDTH/5);
     
     [_addButton addTarget:self action:@selector(addButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_addButton];
