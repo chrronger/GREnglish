@@ -1,0 +1,95 @@
+PODS:
+  - Alamofire (3.4.2)
+  - ASIHTTPRequest (1.8.2):
+    - ASIHTTPRequest/ASIWebPageRequest (= 1.8.2)
+    - ASIHTTPRequest/CloudFiles (= 1.8.2)
+    - ASIHTTPRequest/Core (= 1.8.2)
+    - ASIHTTPRequest/S3 (= 1.8.2)
+  - ASIHTTPRequest/ASIWebPageRequest (1.8.2):
+    - ASIHTTPRequest/Core
+  - ASIHTTPRequest/CloudFiles (1.8.2):
+    - ASIHTTPRequest/Core
+  - ASIHTTPRequest/Core (1.8.2):
+    - Reachability
+  - ASIHTTPRequest/S3 (1.8.2):
+    - ASIHTTPRequest/Core
+  - BMPlayer (0.3.0):
+    - NVActivityIndicatorView (~> 2.6)
+    - SnapKit
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - MJRefresh (3.1.12)
+  - MOBFoundation (2.0.10)
+  - NVActivityIndicatorView (2.10)
+  - pop (1.0.9)
+  - Reachability (3.2)
+  - SDCycleScrollView (1.65):
+    - SDWebImage (~> 3.7)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
+  - ShareSDK3 (3.4.1):
+    - ShareSDK3/ShareSDK (= 3.4.1)
+  - ShareSDK3/ShareSDK (3.4.1)
+  - ShareSDK3/ShareSDKPlatforms/QQ (3.4.1)
+  - ShareSDK3/ShareSDKPlatforms/SinaWeibo (3.4.1)
+  - ShareSDK3/ShareSDKPlatforms/WeChat (3.4.1)
+  - ShareSDK3/ShareSDKUI (3.4.1)
+  - SnapKit (0.21.1)
+  - SVProgressHUD (2.0.3)
+  - SwiftyJSON (2.3.2)
+  - SwipeBack (1.1.0)
+  - YYCache (1.0.3)
+  - YYImage (1.0.3):
+    - YYImage/Core (= 1.0.3)
+  - YYImage/Core (1.0.3)
+  - YYWebImage (1.0.3):
+    - YYCache
+    - YYImage
+
+DEPENDENCIES:
+  - Alamofire (~> 3.4.0)
+  - ASIHTTPRequest (~> 1.8.2)
+  - BMPlayer
+  - FMDB
+  - MJRefresh (~> 3.1.0)
+  - MOBFoundation
+  - NVActivityIndicatorView (~> 2.6)
+  - pop (~> 1.0.9)
+  - SDCycleScrollView (~> 1.64)
+  - ShareSDK3
+  - ShareSDK3/ShareSDKPlatforms/QQ
+  - ShareSDK3/ShareSDKPlatforms/SinaWeibo
+  - ShareSDK3/ShareSDKPlatforms/WeChat
+  - ShareSDK3/ShareSDKUI
+  - SnapKit (~> 0.21.0)
+  - SVProgressHUD (~> 2.0.3)
+  - SwiftyJSON (~> 2.3.2)
+  - SwipeBack (~> 1.1)
+  - YYWebImage (= 1.0.3)
+
+SPEC CHECKSUMS:
+  Alamofire: 6aa33201d20d069e1598891cf928883ff1888c7a
+  ASIHTTPRequest: ec013992946676b7978dcbde6396d57312d21db4
+  BMPlayer: e20d9cd2b307c4d0b2bf26461209f79659601a97
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  MOBFoundation: be1a5556482800c5c3515f8fbd32770a6622bd42
+  NVActivityIndicatorView: 5568608c3511690a42c4dd02f7a1de4361d670ae
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  ShareSDK3: e7bcdfeb95338f89efd6fff82b4793d2bfee76f8
+  SnapKit: bbad04cb016c7cead63965f16b00c09318d271ee
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  SwipeBack: 45a42c333b7b9657b9f02cf19673339b3a006195
+  YYCache: 282f35b5b0990833d0b7a06d864a87141a021da2
+  YYImage: 362f44ffba1fc498f2152060f3bb54ed84600981
+  YYWebImage: 8da75a611fd0d2e0f58a273f9ca0bc731614cb0d
+
+PODFILE CHECKSUM: 46bedc0668909a02ea0de66cbdcd29ef2af11a10
+
+COCOAPODS: 1.0.1
