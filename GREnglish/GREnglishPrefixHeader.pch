@@ -1,0 +1,18 @@
+//
+//  GREnglishPrefixHeader.pch
+//  GREnglish
+//
+//  Created by sen on 16/9/13.
+//  Copyright © 2016年 sen. All rights reserved.
+//
+
+#ifndef GREnglishPrefixHeader_pch
+#define GREnglishPrefixHeader_pch
+
+
+#define IMAGE(imageName) [UIImage imageNamed:imageName]
+#define SCREEN_BOUNDS [UIScreen mainScreen].bounds
+#define SCREEN_WIDTH SCREEN_BOUNDS.size.width
+#define SCREEN_HEIGHT SCREEN_BOUNDS.size.height
+
+#endif /* GREnglishPrefixHeader_pch */
