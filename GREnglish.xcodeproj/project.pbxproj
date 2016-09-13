@@ -15,6 +15,7 @@
 		A6A37D8D1D879BAB003CEAD5 /* GREnglishTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A37D8C1D879BAB003CEAD5 /* GREnglishTests.m */; };
 		A6A37D981D879BAB003CEAD5 /* GREnglishUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A37D971D879BAB003CEAD5 /* GREnglishUITests.m */; };
 		A6A37DC51D87AEEA003CEAD5 /* note.markdown in Sources */ = {isa = PBXBuildFile; fileRef = A6A37DC41D87AEEA003CEAD5 /* note.markdown */; };
+		A6A37DC81D87B1AC003CEAD5 /* GRTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A37DC71D87B1AC003CEAD5 /* GRTabBarViewController.m */; };
 		D5582C0FEE1584325CE0C3C2 /* Pods_GREnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE328CC0C92963C592C3869 /* Pods_GREnglish.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,8 @@
 		A6A37D971D879BAB003CEAD5 /* GREnglishUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GREnglishUITests.m; sourceTree = "<group>"; };
 		A6A37D991D879BAB003CEAD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6A37DC41D87AEEA003CEAD5 /* note.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = note.markdown; sourceTree = "<group>"; };
+		A6A37DC61D87B1AC003CEAD5 /* GRTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GRTabBarViewController.h; path = ../../../../../../GRTabBarViewController.h; sourceTree = "<group>"; };
+		A6A37DC71D87B1AC003CEAD5 /* GRTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GRTabBarViewController.m; path = ../../../../../../GRTabBarViewController.m; sourceTree = "<group>"; };
 		D8AFF454EF23EFA05AB27714 /* Pods-GREnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GREnglish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GREnglish/Pods-GREnglish.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -269,6 +272,8 @@
 		A6A37DB21D87A23E003CEAD5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A6A37DC61D87B1AC003CEAD5 /* GRTabBarViewController.h */,
+				A6A37DC71D87B1AC003CEAD5 /* GRTabBarViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -475,6 +480,7 @@
 		A6A37D671D879BAB003CEAD5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = GR;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = sen;
 				TargetAttributes = {
@@ -594,6 +600,7 @@
 				A6A37D771D879BAB003CEAD5 /* AppDelegate.m in Sources */,
 				A6A37DC51D87AEEA003CEAD5 /* note.markdown in Sources */,
 				A6A37D741D879BAB003CEAD5 /* main.m in Sources */,
+				A6A37DC81D87B1AC003CEAD5 /* GRTabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
