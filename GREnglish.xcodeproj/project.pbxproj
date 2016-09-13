@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A00B9811D87FB1A00184254 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B96E1D87FB1A00184254 /* NSString+Extension.m */; };
+		9A00B9821D87FB1A00184254 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B9701D87FB1A00184254 /* UIBarButtonItem+Extension.m */; };
+		9A00B9831D87FB1A00184254 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B9721D87FB1A00184254 /* UIButton+Extension.m */; };
+		9A00B9851D87FB1A00184254 /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B9761D87FB1A00184254 /* UIImage+Common.m */; };
+		9A00B9861D87FB1A00184254 /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B9781D87FB1A00184254 /* UILabel+Extension.m */; };
+		9A00B9871D87FB1A00184254 /* UITableView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B97A1D87FB1A00184254 /* UITableView+Extension.m */; };
+		9A00B9881D87FB1A00184254 /* UITextField+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B97C1D87FB1A00184254 /* UITextField+Extension.m */; };
+		9A00B9891D87FB1A00184254 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B97E1D87FB1A00184254 /* UIView+Frame.m */; };
+		9A00B98E1D87FB7200184254 /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B98D1D87FB7200184254 /* UIColor+expanded.m */; };
 		A6A37D741D879BAB003CEAD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A37D731D879BAB003CEAD5 /* main.m */; };
 		A6A37D771D879BAB003CEAD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A37D761D879BAB003CEAD5 /* AppDelegate.m */; };
 		A6A37D7D1D879BAB003CEAD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6A37D7B1D879BAB003CEAD5 /* Main.storyboard */; };
@@ -46,6 +55,26 @@
 /* Begin PBXFileReference section */
 		66DEEA0867E34D58BEE7EE4B /* Pods-GREnglish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GREnglish.release.xcconfig"; path = "Pods/Target Support Files/Pods-GREnglish/Pods-GREnglish.release.xcconfig"; sourceTree = "<group>"; };
 		7CE328CC0C92963C592C3869 /* Pods_GREnglish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GREnglish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A00B96D1D87FB1A00184254 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		9A00B96E1D87FB1A00184254 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		9A00B96F1D87FB1A00184254 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		9A00B9701D87FB1A00184254 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		9A00B9711D87FB1A00184254 /* UIButton+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extension.h"; sourceTree = "<group>"; };
+		9A00B9721D87FB1A00184254 /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extension.m"; sourceTree = "<group>"; };
+		9A00B9751D87FB1A00184254 /* UIImage+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Common.h"; sourceTree = "<group>"; };
+		9A00B9761D87FB1A00184254 /* UIImage+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Common.m"; sourceTree = "<group>"; };
+		9A00B9771D87FB1A00184254 /* UILabel+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extension.h"; sourceTree = "<group>"; };
+		9A00B9781D87FB1A00184254 /* UILabel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extension.m"; sourceTree = "<group>"; };
+		9A00B9791D87FB1A00184254 /* UITableView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Extension.h"; sourceTree = "<group>"; };
+		9A00B97A1D87FB1A00184254 /* UITableView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Extension.m"; sourceTree = "<group>"; };
+		9A00B97B1D87FB1A00184254 /* UITextField+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Extension.h"; sourceTree = "<group>"; };
+		9A00B97C1D87FB1A00184254 /* UITextField+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Extension.m"; sourceTree = "<group>"; };
+		9A00B97D1D87FB1A00184254 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		9A00B97E1D87FB1A00184254 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		9A00B98B1D87FB4800184254 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		9A00B98C1D87FB7200184254 /* UIColor+expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+expanded.h"; sourceTree = "<group>"; };
+		9A00B98D1D87FB7200184254 /* UIColor+expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+expanded.m"; sourceTree = "<group>"; };
+		9A00B98F1D87FC1E00184254 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		A6A37D6F1D879BAB003CEAD5 /* GREnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GREnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6A37D731D879BAB003CEAD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A6A37D751D879BAB003CEAD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,6 +146,55 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9A00B95D1D87FAA700184254 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9A00B9601D87FAF700184254 /* Tools */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9A00B95E1D87FAA700184254 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				9A00B98B1D87FB4800184254 /* Header.h */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		9A00B95F1D87FAAE00184254 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				9A00B98C1D87FB7200184254 /* UIColor+expanded.h */,
+				9A00B98D1D87FB7200184254 /* UIColor+expanded.m */,
+				9A00B96D1D87FB1A00184254 /* NSString+Extension.h */,
+				9A00B96E1D87FB1A00184254 /* NSString+Extension.m */,
+				9A00B96F1D87FB1A00184254 /* UIBarButtonItem+Extension.h */,
+				9A00B9701D87FB1A00184254 /* UIBarButtonItem+Extension.m */,
+				9A00B9711D87FB1A00184254 /* UIButton+Extension.h */,
+				9A00B9721D87FB1A00184254 /* UIButton+Extension.m */,
+				9A00B9751D87FB1A00184254 /* UIImage+Common.h */,
+				9A00B9761D87FB1A00184254 /* UIImage+Common.m */,
+				9A00B9771D87FB1A00184254 /* UILabel+Extension.h */,
+				9A00B9781D87FB1A00184254 /* UILabel+Extension.m */,
+				9A00B9791D87FB1A00184254 /* UITableView+Extension.h */,
+				9A00B97A1D87FB1A00184254 /* UITableView+Extension.m */,
+				9A00B97B1D87FB1A00184254 /* UITextField+Extension.h */,
+				9A00B97C1D87FB1A00184254 /* UITextField+Extension.m */,
+				9A00B97D1D87FB1A00184254 /* UIView+Frame.h */,
+				9A00B97E1D87FB1A00184254 /* UIView+Frame.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		9A00B9601D87FAF700184254 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				9A00B98F1D87FC1E00184254 /* Header.h */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		A6A37D661D879BAB003CEAD5 = {
 			isa = PBXGroup;
 			children = (
@@ -185,28 +263,13 @@
 		A6A37DEF1D87F789003CEAD5 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				A6A37E281D87F8E1003CEAD5 /* Categories */,
-				A6A37E291D87F8E1003CEAD5 /* Model */,
 				A6A37E2A1D87F8E1003CEAD5 /* Module */,
+				9A00B95F1D87FAAE00184254 /* Categories */,
+				9A00B95D1D87FAA700184254 /* Utils */,
+				9A00B95E1D87FAA700184254 /* Vendor */,
 				A6A37E531D87F8E2003CEAD5 /* Node */,
-				A6A37E551D87F8E2003CEAD5 /* Utils */,
-				A6A37E561D87F8E2003CEAD5 /* Vender */,
 			);
 			path = Application;
-			sourceTree = "<group>";
-		};
-		A6A37E281D87F8E1003CEAD5 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		A6A37E291D87F8E1003CEAD5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		A6A37E2A1D87F8E1003CEAD5 /* Module */ = {
@@ -432,20 +495,6 @@
 			path = Node;
 			sourceTree = "<group>";
 		};
-		A6A37E551D87F8E2003CEAD5 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		A6A37E561D87F8E2003CEAD5 /* Vender */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Vender;
-			sourceTree = "<group>";
-		};
 		E96B0A84681AA0AC63946FB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -636,17 +685,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A00B9831D87FB1A00184254 /* UIButton+Extension.m in Sources */,
 				A6A37E5D1D87F8E2003CEAD5 /* GRPublishViewController.m in Sources */,
 				A6A37D771D879BAB003CEAD5 /* AppDelegate.m in Sources */,
 				A6A37E591D87F8E2003CEAD5 /* GRNavigationController.m in Sources */,
+				9A00B9861D87FB1A00184254 /* UILabel+Extension.m in Sources */,
 				A6A37E5E1D87F8E2003CEAD5 /* GRTweetsViewController.m in Sources */,
 				A6A37E571D87F8E2003CEAD5 /* GRGrammarViewController.m in Sources */,
 				A6A37E581D87F8E2003CEAD5 /* GRHomeViewController.m in Sources */,
+				9A00B98E1D87FB7200184254 /* UIColor+expanded.m in Sources */,
 				A6A37E5F1D87F8E2003CEAD5 /* note.markdown in Sources */,
+				9A00B9891D87FB1A00184254 /* UIView+Frame.m in Sources */,
 				A6A37E5B1D87F8E2003CEAD5 /* GRTabBar.m in Sources */,
+				9A00B9821D87FB1A00184254 /* UIBarButtonItem+Extension.m in Sources */,
 				A6A37E5C1D87F8E2003CEAD5 /* GRProfileViewController.m in Sources */,
+				9A00B9871D87FB1A00184254 /* UITableView+Extension.m in Sources */,
 				A6A37D741D879BAB003CEAD5 /* main.m in Sources */,
 				A6A37E5A1D87F8E2003CEAD5 /* GRTabBarViewController.m in Sources */,
+				9A00B9851D87FB1A00184254 /* UIImage+Common.m in Sources */,
+				9A00B9811D87FB1A00184254 /* NSString+Extension.m in Sources */,
+				9A00B9881D87FB1A00184254 /* UITextField+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

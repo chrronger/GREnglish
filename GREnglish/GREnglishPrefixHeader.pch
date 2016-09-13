@@ -9,6 +9,21 @@
 #ifndef GREnglishPrefixHeader_pch
 #define GREnglishPrefixHeader_pch
 
+#ifdef __OBJC__
+
+#import "UIView+Frame.h"
+#import "UIImage+Common.h"
+#import "UITableView+Extension.h"
+#import "UIColor+expanded.h"
+#import "UIButton+Extension.h"
+#import "UILabel+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+#import "UITextField+Extension.h"
+#import "NSString+Extension.h"
+#endif
+
+#define screenWidth [UIScreen mainScreen].bounds.size.width
+#define screenHeight [UIScreen mainScreen].bounds.size.height
 
 #define IMAGE(imageName) [UIImage imageNamed:imageName]
 #define SCREEN_BOUNDS [UIScreen mainScreen].bounds
