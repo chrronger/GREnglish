@@ -15,8 +15,7 @@
 
 @end
 
-@interface GRTabBar : UIView
-
-@property(nonatomic,weak)id <GRTabBarDelegate>delegate;
+@interface GRTabBar : UITabBar
+@property(nonatomic,weak)id <GRTabBarDelegate>tabdelegate;
 
 @end

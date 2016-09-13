@@ -20,6 +20,7 @@
     
     self.window = [[UIWindow alloc]initWithFrame:SCREEN_BOUNDS];
     self.window.rootViewController = [[GRTabBarViewController alloc]init];
+    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
