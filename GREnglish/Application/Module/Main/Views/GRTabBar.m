@@ -33,8 +33,8 @@
     [_addButton setImage:IMAGE(@"tabbar_publish_icon_normal") forState:UIControlStateNormal];
     [_addButton setImage:IMAGE(@"tabbar_publish_icon_selected") forState:UIControlStateHighlighted];
 
-    _addButton.center = CGPointMake(SCREEN_WIDTH/2, 49*0.5-8);
-//    _addButton.size = CGSizeMake(SCREEN_WIDTH/5, SCREEN_WIDTH/5);
+    _addButton.center = CGPointMake((SCREEN_WIDTH-SCREEN_WIDTH/5 )*0.5, self.frame.size.height*0.5-20);
+    _addButton.size = CGSizeMake(SCREEN_WIDTH/5, SCREEN_WIDTH/5);
     
     [_addButton addTarget:self action:@selector(addButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_addButton];
@@ -43,7 +43,7 @@
 
 - (void)addButtonClick:(UIButton *)button
 {
-    if ([self.tabdelegate performSelector:@selector(didAddButtonClick:)]) {
+    if ([self.tabdelegate respondsToSelector:@selector(didAddButtonClick:)]) {
         [self.tabdelegate didAddButtonClick:button];
     }
 }

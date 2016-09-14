@@ -275,9 +275,9 @@
 		A6A37E2A1D87F8E1003CEAD5 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				A6A37E2B1D87F8E1003CEAD5 /* Grammar */,
-				A6A37E311D87F8E2003CEAD5 /* Home */,
 				A6A37E371D87F8E2003CEAD5 /* Main */,
+				A6A37E311D87F8E2003CEAD5 /* Home */,
+				A6A37E2B1D87F8E1003CEAD5 /* Grammar */,
 				A6A37E411D87F8E2003CEAD5 /* Profile */,
 				A6A37E471D87F8E2003CEAD5 /* Publish */,
 				A6A37E4D1D87F8E2003CEAD5 /* Tweets */,
@@ -364,10 +364,10 @@
 		A6A37E381D87F8E2003CEAD5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A6A37E391D87F8E2003CEAD5 /* GRNavigationController.h */,
-				A6A37E3A1D87F8E2003CEAD5 /* GRNavigationController.m */,
 				A6A37E3B1D87F8E2003CEAD5 /* GRTabBarViewController.h */,
 				A6A37E3C1D87F8E2003CEAD5 /* GRTabBarViewController.m */,
+				A6A37E391D87F8E2003CEAD5 /* GRNavigationController.h */,
+				A6A37E3A1D87F8E2003CEAD5 /* GRNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

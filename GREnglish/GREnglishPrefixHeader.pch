@@ -22,12 +22,13 @@
 #import "NSString+Extension.h"
 #endif
 
-#define screenWidth [UIScreen mainScreen].bounds.size.width
-#define screenHeight [UIScreen mainScreen].bounds.size.height
-
 #define IMAGE(imageName) [UIImage imageNamed:imageName]
 #define SCREEN_BOUNDS [UIScreen mainScreen].bounds
 #define SCREEN_WIDTH SCREEN_BOUNDS.size.width
 #define SCREEN_HEIGHT SCREEN_BOUNDS.size.height
+#define HEXCOLOR(str) [UIColor colorWithHexString:str]
+
+
+
 
 #endif /* GREnglishPrefixHeader_pch */

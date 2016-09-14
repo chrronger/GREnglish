@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol GRTabBarDelegate <NSObject>
+@protocol GRTabBarDelegate <UITabBarDelegate>
 
 @optional
 - (void)didAddButtonClick:(UIButton *)button;
@@ -16,6 +16,7 @@
 @end
 
 @interface GRTabBar : UITabBar
-@property(nonatomic,weak)id <GRTabBarDelegate>tabdelegate;
+
+@property(nonatomic,assign)id <GRTabBarDelegate>tabdelegate;
 
 @end
