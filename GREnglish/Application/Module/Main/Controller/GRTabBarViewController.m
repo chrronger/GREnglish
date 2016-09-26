@@ -26,7 +26,7 @@
     
     GRTabBar *tabBar = [[GRTabBar alloc]init];
     tabBar.delegate = self;
-    tabBar.tintColor = HEXCOLOR(@"41ca61");
+    tabBar.barTintColor = HEXCOLOR(@"41ca61");
     [self setValue:tabBar forKey:@"tabBar"];
     
     [self addChildControllers];

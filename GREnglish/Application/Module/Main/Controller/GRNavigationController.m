@@ -23,7 +23,7 @@
 - (void)configNavBar{
     self.navigationBar.barStyle = UIBarStyleBlack;
     self.navigationBar.translucent = NO;
-    self.navigationBar.tintColor = HEXCOLOR(@"41ca61");
+    self.navigationBar.barTintColor = HEXCOLOR(@"41ca61");
     
 }
 
