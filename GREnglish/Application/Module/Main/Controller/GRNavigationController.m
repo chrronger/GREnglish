@@ -16,7 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self configNavBar];
+}
+
+- (void)configNavBar{
+    self.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationBar.translucent = NO;
+    self.navigationBar.tintColor = HEXCOLOR(@"41ca61");
+    
 }
 
 - (void)didReceiveMemoryWarning {
