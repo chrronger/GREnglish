@@ -22,10 +22,25 @@
 #import "NSString+Extension.h"
 #endif
 
+
+#if DEBUG
+
+#define GRLog(FORMAT, ...) fprintf(stderr, "[%s:%d行] %s\n", [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+
+#else
+
+#define GRLog(FORMAT, ...) nil
+
+#endif
+
+
+
 #define IMAGE(imageName) [UIImage imageNamed:imageName]
 #define SCREEN_BOUNDS [UIScreen mainScreen].bounds
 #define SCREEN_WIDTH SCREEN_BOUNDS.size.width
 #define SCREEN_HEIGHT SCREEN_BOUNDS.size.height
+
+/****************** color **************************/
 #define HEXCOLOR(str) [UIColor colorWithHexString:str]
 
 
