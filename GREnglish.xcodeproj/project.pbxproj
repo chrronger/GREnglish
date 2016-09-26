@@ -16,6 +16,7 @@
 		9A00B9881D87FB1A00184254 /* UITextField+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B97C1D87FB1A00184254 /* UITextField+Extension.m */; };
 		9A00B9891D87FB1A00184254 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B97E1D87FB1A00184254 /* UIView+Frame.m */; };
 		9A00B98E1D87FB7200184254 /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B98D1D87FB7200184254 /* UIColor+expanded.m */; };
+		A611A32D1D99212B004384AE /* GRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A611A32C1D99212B004384AE /* GRLoginViewController.m */; };
 		A6A37D741D879BAB003CEAD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A37D731D879BAB003CEAD5 /* main.m */; };
 		A6A37D771D879BAB003CEAD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A37D761D879BAB003CEAD5 /* AppDelegate.m */; };
 		A6A37D7D1D879BAB003CEAD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6A37D7B1D879BAB003CEAD5 /* Main.storyboard */; };
@@ -75,6 +76,8 @@
 		9A00B98C1D87FB7200184254 /* UIColor+expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+expanded.h"; sourceTree = "<group>"; };
 		9A00B98D1D87FB7200184254 /* UIColor+expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+expanded.m"; sourceTree = "<group>"; };
 		9A00B98F1D87FC1E00184254 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		A611A32B1D99212B004384AE /* GRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRLoginViewController.h; sourceTree = "<group>"; };
+		A611A32C1D99212B004384AE /* GRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRLoginViewController.m; sourceTree = "<group>"; };
 		A6A37D6F1D879BAB003CEAD5 /* GREnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GREnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6A37D731D879BAB003CEAD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A6A37D751D879BAB003CEAD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -403,6 +406,8 @@
 			children = (
 				A6A37E431D87F8E2003CEAD5 /* GRProfileViewController.h */,
 				A6A37E441D87F8E2003CEAD5 /* GRProfileViewController.m */,
+				A611A32B1D99212B004384AE /* GRLoginViewController.h */,
+				A611A32C1D99212B004384AE /* GRLoginViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -685,6 +690,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A611A32D1D99212B004384AE /* GRLoginViewController.m in Sources */,
 				9A00B9831D87FB1A00184254 /* UIButton+Extension.m in Sources */,
 				A6A37E5D1D87F8E2003CEAD5 /* GRPublishViewController.m in Sources */,
 				A6A37D771D879BAB003CEAD5 /* AppDelegate.m in Sources */,
