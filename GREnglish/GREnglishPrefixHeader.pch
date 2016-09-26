@@ -40,7 +40,7 @@
 #define SCREEN_WIDTH SCREEN_BOUNDS.size.width
 #define SCREEN_HEIGHT SCREEN_BOUNDS.size.height
 
-/****************** color **************************/
+/***************************** color **************************/
 #define HEXCOLOR(str) [UIColor colorWithHexString:str]
 
 
