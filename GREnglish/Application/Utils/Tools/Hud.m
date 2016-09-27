@@ -11,6 +11,8 @@
 #define kHudTag 10000
 #define kBezelViewWidth 200
 #define kBezelViewHeigh 200
+#define screenWidth [UIScreen mainScreen].bounds.size.width
+#define screenHeight [UIScreen mainScreen].bounds.size.height
 
 @implementation Hud
 
