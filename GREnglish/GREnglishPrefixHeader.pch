@@ -11,6 +11,7 @@
 
 #ifdef __OBJC__
 
+//分类头文件
 #import "UIView+Frame.h"
 #import "UIImage+Common.h"
 #import "UITableView+Extension.h"
@@ -20,6 +21,11 @@
 #import "UIBarButtonItem+Extension.h"
 #import "UITextField+Extension.h"
 #import "NSString+Extension.h"
+
+//第三方库头文件
+#import "FGNetworking.h"
+
+
 #endif
 
 
@@ -33,8 +39,6 @@
 
 #endif
 
-
-
 #define IMAGE(imageName) [UIImage imageNamed:imageName]
 #define SCREEN_BOUNDS [UIScreen mainScreen].bounds
 #define SCREEN_WIDTH SCREEN_BOUNDS.size.width
@@ -42,7 +46,6 @@
 
 /***************************** color **************************/
 #define HEXCOLOR(str) [UIColor colorWithHexString:str]
-
 
 
 
