@@ -10,8 +10,7 @@
 #import "AFNetworking.h"
 #import "GRAllCategoryModel.h"
 #import "MJExtension.h"
-
-#define URLString @"http://english.6ag.cn/api/getAllCategories.api"
+#import "GRUrl.h"
 
 @interface GRHomeViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -33,7 +32,8 @@
     
     __weak typeof(self) weakSelf = self;
     NSDictionary *param = @{@"user_id":@0,@"have_data":@1,@"count":@1};
-    [FGNetworking requsetWithPath:URLString params:param method:Get handleBlcok:^(id response, NSError *error) {
+    param = @{@"category_id":@0,@"page":@1,@"count":@5,@"recommend":@1};
+    [FGNetworking requsetWithPath:GET_VIDEO_INFOS_LIST params:param method:Get handleBlcok:^(id response, NSError *error) {
         [weakSelf requestResponse:response error:error];
     }];
 }

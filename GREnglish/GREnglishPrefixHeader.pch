@@ -22,15 +22,12 @@
 #import "UITextField+Extension.h"
 #import "NSString+Extension.h"
 
-<<<<<<< HEAD
 #import "SDAutoLayout.h"
-=======
+
 //通用头文件
 #import "Hud.h"
 #import "UserDefault.h"
 
-
->>>>>>> 7504fc02f41d178882bad8f318fead7cfe6874d7
 //第三方库头文件
 #import "FGNetworking.h"
 #import "MJExtension.h"
@@ -60,3 +57,9 @@
 
 
 #endif /* GREnglishPrefixHeader_pch */
+
+
+
+
+#define ALLCategoryUrl  @"http://english.6ag.cn/api/getAllCategories.api"
+#define  http://www.english.com/api/getVideoInfosList.api

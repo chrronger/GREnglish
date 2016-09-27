@@ -7,6 +7,7 @@
 //
 
 #import "FGNetworking.h"
+#import "GRUrl.h"
 
 /** 保存所有网络请求的task */
 static NSMutableArray *kRequestTasks;
@@ -31,6 +32,8 @@ static NSInteger maxConcurrentCount = 3;
                  method:(HttpMethod)mothod
             handleBlcok:(void (^)(id response, NSError *error))block
 {
+    path = [NSString stringWithFormat:@"%@%@",BASE_URL,path];
+    
     if ([path length] <= 0 || nil == path) return;
     AFHTTPSessionManager *manager = [FGNetworking manager];
     [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];

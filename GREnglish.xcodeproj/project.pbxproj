@@ -63,6 +63,7 @@
 		3A978D361D9A18B000058210 /* HomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderView.m; sourceTree = "<group>"; };
 		3A978D381D9A291900058210 /* GRAllCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRAllCategoryModel.h; sourceTree = "<group>"; };
 		3A978D391D9A291900058210 /* GRAllCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRAllCategoryModel.m; sourceTree = "<group>"; };
+		3A978D3B1D9A589B00058210 /* GRUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRUrl.h; sourceTree = "<group>"; };
 		66DEEA0867E34D58BEE7EE4B /* Pods-GREnglish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GREnglish.release.xcconfig"; path = "Pods/Target Support Files/Pods-GREnglish/Pods-GREnglish.release.xcconfig"; sourceTree = "<group>"; };
 		7CE328CC0C92963C592C3869 /* Pods_GREnglish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GREnglish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A00B96D1D87FB1A00184254 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
@@ -228,6 +229,7 @@
 		9A00B9601D87FAF700184254 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				3A978D3B1D9A589B00058210 /* GRUrl.h */,
 				9A56BFEF1D9A512E00047A5F /* userDefault.h */,
 				9A56BFF01D9A512E00047A5F /* UserDefault.m */,
 				9A56BFEC1D9A508300047A5F /* Hud.h */,
