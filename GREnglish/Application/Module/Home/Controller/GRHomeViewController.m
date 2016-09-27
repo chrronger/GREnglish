@@ -8,12 +8,15 @@
 
 #import "GRHomeViewController.h"
 #import "AFNetworking.h"
+#import "GRAllCategoryModel.h"
+#import "MJExtension.h"
 
 #define URLString @"http://english.6ag.cn/api/getAllCategories.api"
 
 @interface GRHomeViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     UITableView *_tableView;
+    NSArray *_categoryArray;
 }
 
 @end
@@ -28,16 +31,25 @@
 
 - (void)requestData{
     
+    __weak typeof(self) weakSelf = self;
     NSDictionary *param = @{@"user_id":@0,@"have_data":@1,@"count":@1};
-    [[AFHTTPSessionManager manager] GET:URLString parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [self requestResponse:responseObject error:nil] ;
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [self requestResponse:nil error:error];
+    [FGNetworking requsetWithPath:URLString params:param method:Get handleBlcok:^(id response, NSError *error) {
+        [weakSelf requestResponse:response error:error];
     }];
 }
 
 - (void)requestResponse:(id)responseObject error:(NSError *)error{
-    
+    if (responseObject) {
+        NSMutableArray *dataArray = [[NSMutableArray alloc] init];
+        NSArray *categoryImgArray = @[@"danci",@"kouyu",@"tingli",@"yinbiao",@"yuedu",@"yufa",@"zuowen"];
+        for (int i = 0; i < dataArray.count; i++) {
+            GRAllCategoryModel *model = [GRAllCategoryModel mj_objectWithKeyValues:responseObject[@"result"][i]];
+            [dataArray addObject:model];
+            model.logoStr = categoryImgArray[i];
+        }
+        _categoryArray = dataArray;
+        [self loadAllView];
+    }
 }
 
 - (void)loadAllView{

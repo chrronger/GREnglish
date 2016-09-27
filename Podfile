@@ -23,5 +23,6 @@ pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
 #pod 'BMPlayer'
 pod 'ASIHTTPRequest', '~> 1.8.2'
 pod 'SDAutoLayout', '~> 2.1.7'
+pod 'MJExtension', '~> 3.0.13'
 
 end
