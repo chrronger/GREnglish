@@ -52,7 +52,7 @@
 
 /***************************** color **************************/
 #define HEXCOLOR(str) [UIColor colorWithHexString:str]
-
+#define FONT(size)  [UIFont systemFontOfSize:size]
 
 
 #endif /* GREnglishPrefixHeader_pch */

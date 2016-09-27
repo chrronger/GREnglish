@@ -14,6 +14,7 @@
 #import "GRGrammarViewController.h"
 #import "GRPublishViewController.h"
 #import "GRTabBar.h"
+#import "GRLoginViewController.h"
 
 @interface GRTabBarViewController () <GRTabBarDelegate>
 
@@ -61,8 +62,8 @@
 
 - (void)didAddButtonClick:(UIButton *)button
 {
-    
-    [self presentViewController:[[GRPublishViewController alloc]init] animated:YES completion:nil];
+    //
+    [self presentViewController:[[GRLoginViewController alloc]init] animated:YES completion:nil];
 }
 
 

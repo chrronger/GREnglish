@@ -43,8 +43,8 @@
 
 - (void)addButtonClick:(UIButton *)button
 {
-    if ([self.tabdelegate respondsToSelector:@selector(didAddButtonClick:)]) {
-        [self.tabdelegate didAddButtonClick:button];
+    if ([self.delegate respondsToSelector:@selector(didAddButtonClick:)]) {
+        [self.delegate didAddButtonClick:button];
     }
 }
 

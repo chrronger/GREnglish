@@ -23,6 +23,8 @@
 		9A56BFF11D9A512E00047A5F /* UserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A56BFF01D9A512E00047A5F /* UserDefault.m */; };
 		9A8B91C81D9A570200B57AA1 /* GRTweetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8B91C71D9A570200B57AA1 /* GRTweetModel.m */; };
 		A611A32D1D99212B004384AE /* GRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A611A32C1D99212B004384AE /* GRLoginViewController.m */; };
+		A637F42B1D9A6B9E00C41A8A /* GRAccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A637F42A1D9A6B9E00C41A8A /* GRAccountModel.m */; };
+		A637F42E1D9A6BDA00C41A8A /* Api.m in Sources */ = {isa = PBXBuildFile; fileRef = A637F42D1D9A6BDA00C41A8A /* Api.m */; };
 		A6A37D741D879BAB003CEAD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A37D731D879BAB003CEAD5 /* main.m */; };
 		A6A37D771D879BAB003CEAD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A37D761D879BAB003CEAD5 /* AppDelegate.m */; };
 		A6A37D7D1D879BAB003CEAD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6A37D7B1D879BAB003CEAD5 /* Main.storyboard */; };
@@ -97,6 +99,10 @@
 		9A8B91C71D9A570200B57AA1 /* GRTweetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRTweetModel.m; sourceTree = "<group>"; };
 		A611A32B1D99212B004384AE /* GRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRLoginViewController.h; sourceTree = "<group>"; };
 		A611A32C1D99212B004384AE /* GRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRLoginViewController.m; sourceTree = "<group>"; };
+		A637F4291D9A6B9E00C41A8A /* GRAccountModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GRAccountModel.h; path = GREnglish/Application/Module/Profile/Controller/GRAccountModel.h; sourceTree = SOURCE_ROOT; };
+		A637F42A1D9A6B9E00C41A8A /* GRAccountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GRAccountModel.m; path = GREnglish/Application/Module/Profile/Controller/GRAccountModel.m; sourceTree = SOURCE_ROOT; };
+		A637F42C1D9A6BDA00C41A8A /* Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Api.h; sourceTree = "<group>"; };
+		A637F42D1D9A6BDA00C41A8A /* Api.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Api.m; sourceTree = "<group>"; };
 		A6A37D6F1D879BAB003CEAD5 /* GREnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GREnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6A37D731D879BAB003CEAD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A6A37D751D879BAB003CEAD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -300,6 +306,8 @@
 				A6A37D761D879BAB003CEAD5 /* AppDelegate.m */,
 				A6A37DDE1D87DE95003CEAD5 /* Config.h */,
 				A6A37DDF1D87DF69003CEAD5 /* GREnglishPrefixHeader.pch */,
+				A637F42C1D9A6BDA00C41A8A /* Api.h */,
+				A637F42D1D9A6BDA00C41A8A /* Api.m */,
 				A6A37DEF1D87F789003CEAD5 /* Application */,
 				A6A37D831D879BAB003CEAD5 /* Info.plist */,
 				A6A37D7B1D879BAB003CEAD5 /* Main.storyboard */,
@@ -474,6 +482,8 @@
 		A6A37E451D87F8E2003CEAD5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A637F4291D9A6B9E00C41A8A /* GRAccountModel.h */,
+				A637F42A1D9A6B9E00C41A8A /* GRAccountModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -624,6 +634,7 @@
 				TargetAttributes = {
 					A6A37D6E1D879BAB003CEAD5 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 3ZG7RQH8M7;
 					};
 					A6A37D871D879BAB003CEAD5 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -754,8 +765,13 @@
 				9A00B9821D87FB1A00184254 /* UIBarButtonItem+Extension.m in Sources */,
 				9A56BFE81D9A235B00047A5F /* FGNetworking.m in Sources */,
 				A6A37E5C1D87F8E2003CEAD5 /* GRProfileViewController.m in Sources */,
+
 				3A978D3A1D9A291900058210 /* GRAllCategoryModel.m in Sources */,
+
+				A637F42E1D9A6BDA00C41A8A /* Api.m in Sources */,
+
 				9A00B9871D87FB1A00184254 /* UITableView+Extension.m in Sources */,
+				A637F42B1D9A6B9E00C41A8A /* GRAccountModel.m in Sources */,
 				A6A37D741D879BAB003CEAD5 /* main.m in Sources */,
 				A6A37E5A1D87F8E2003CEAD5 /* GRTabBarViewController.m in Sources */,
 				3A978D371D9A18B000058210 /* HomeHeaderView.m in Sources */,
@@ -905,6 +921,7 @@
 			baseConfigurationReference = D8AFF454EF23EFA05AB27714 /* Pods-GREnglish.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3ZG7RQH8M7;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/GREnglish/GREnglishPrefixHeader.pch";
 				INFOPLIST_FILE = GREnglish/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -919,6 +936,7 @@
 			baseConfigurationReference = 66DEEA0867E34D58BEE7EE4B /* Pods-GREnglish.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3ZG7RQH8M7;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/GREnglish/GREnglishPrefixHeader.pch";
 				INFOPLIST_FILE = GREnglish/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

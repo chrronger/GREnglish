@@ -1,0 +1,11 @@
+//
+//  Api.m
+//  GREnglish
+//
+//  Created by sen on 2016/9/27.
+//  Copyright © 2016年 sen. All rights reserved.
+//
+
+NSString * const BASEURL = @"http://english.6ag.cn/";
+
+NSString *const LOGINURL= @"api/auth/login.api";
