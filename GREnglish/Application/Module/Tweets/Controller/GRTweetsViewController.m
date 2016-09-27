@@ -7,16 +7,43 @@
 //
 
 #import "GRTweetsViewController.h"
+#import "GRTweetModel.h"
 
 @interface GRTweetsViewController ()
 
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *dataArr;
 @end
 
 @implementation GRTweetsViewController
+{
+    TweetParm *parm;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self getTweetListData];
+}
+
+#pragma mark - Data
+- (void)getTweetListData
+{
+    parm = [[TweetParm alloc] init];
+    parm.type = @"new";
+    parm.page = @1;
+    parm.count = @10;
+    parm.user_id = @0;
+    NSDictionary *parmDic = [parm mj_keyValues];
+    
+    [FGNetworking requsetWithPath:GET_TWEETS_LIST params:parmDic method:Get handleBlcok:^(id response, NSError *error) {
+        if (response) {
+            GRLog(@"%@",response[@"result"][@"data"]);
+        }
+        if (error) {
+            GRLog(@"%@", error);
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +51,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

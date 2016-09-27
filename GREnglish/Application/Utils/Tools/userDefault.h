@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#define read(key) [UserDefault readValueFromKey:key]
-#define write(dic) [UserDefault writeDataWithDic:dic]
-#define delete(key) [UserDefault deleteDataWithKey:key]
+#define readFromPlist(key) [UserDefault readValueFromKey:key]
+#define writeToPlist(dic)  [UserDefault writeDataWithDic:dic]
+#define deleteInPlish(key) [UserDefault deleteDataWithKey:key]
 
 @interface UserDefault : NSObject
 
