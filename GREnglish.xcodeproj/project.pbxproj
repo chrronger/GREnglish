@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A978D371D9A18B000058210 /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A978D361D9A18B000058210 /* HomeHeaderView.m */; };
 		9A00B9811D87FB1A00184254 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B96E1D87FB1A00184254 /* NSString+Extension.m */; };
 		9A00B9821D87FB1A00184254 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B9701D87FB1A00184254 /* UIBarButtonItem+Extension.m */; };
 		9A00B9831D87FB1A00184254 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B9721D87FB1A00184254 /* UIButton+Extension.m */; };
@@ -53,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A978D351D9A18B000058210 /* HomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHeaderView.h; sourceTree = "<group>"; };
+		3A978D361D9A18B000058210 /* HomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderView.m; sourceTree = "<group>"; };
 		66DEEA0867E34D58BEE7EE4B /* Pods-GREnglish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GREnglish.release.xcconfig"; path = "Pods/Target Support Files/Pods-GREnglish/Pods-GREnglish.release.xcconfig"; sourceTree = "<group>"; };
 		7CE328CC0C92963C592C3869 /* Pods_GREnglish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GREnglish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A00B96D1D87FB1A00184254 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
@@ -146,6 +149,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3A978D331D9A0CC600058210 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3A978D341D9A0CD800058210 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3A978D351D9A18B000058210 /* HomeHeaderView.h */,
+				3A978D361D9A18B000058210 /* HomeHeaderView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		9A00B95D1D87FAA700184254 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,7 +178,8 @@
 			children = (
 				9A00B98B1D87FB4800184254 /* Header.h */,
 			);
-			path = Vendor;
+			name = Vendor;
+			path = ../GREnglish/Application/Vendor;
 			sourceTree = "<group>";
 		};
 		9A00B95F1D87FAAE00184254 /* Categories */ = {
@@ -255,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				A6A37D971D879BAB003CEAD5 /* GREnglishUITests.m */,
+				9A00B95E1D87FAA700184254 /* Vendor */,
 				A6A37D991D879BAB003CEAD5 /* Info.plist */,
 			);
 			path = GREnglishUITests;
@@ -266,7 +287,6 @@
 				A6A37E2A1D87F8E1003CEAD5 /* Module */,
 				9A00B95F1D87FAAE00184254 /* Categories */,
 				9A00B95D1D87FAA700184254 /* Utils */,
-				9A00B95E1D87FAA700184254 /* Vendor */,
 				A6A37E531D87F8E2003CEAD5 /* Node */,
 			);
 			path = Application;
@@ -321,9 +341,9 @@
 		A6A37E311D87F8E2003CEAD5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3A978D331D9A0CC600058210 /* Model */,
 				A6A37E321D87F8E2003CEAD5 /* Controller */,
-				A6A37E351D87F8E2003CEAD5 /* Model */,
-				A6A37E361D87F8E2003CEAD5 /* Views */,
+				3A978D341D9A0CD800058210 /* Views */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -335,20 +355,6 @@
 				A6A37E341D87F8E2003CEAD5 /* GRHomeViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		A6A37E351D87F8E2003CEAD5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		A6A37E361D87F8E2003CEAD5 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		A6A37E371D87F8E2003CEAD5 /* Main */ = {
@@ -675,7 +681,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -702,6 +708,7 @@
 				9A00B9871D87FB1A00184254 /* UITableView+Extension.m in Sources */,
 				A6A37D741D879BAB003CEAD5 /* main.m in Sources */,
 				A6A37E5A1D87F8E2003CEAD5 /* GRTabBarViewController.m in Sources */,
+				3A978D371D9A18B000058210 /* HomeHeaderView.m in Sources */,
 				9A00B9851D87FB1A00184254 /* UIImage+Common.m in Sources */,
 				9A00B9811D87FB1A00184254 /* NSString+Extension.m in Sources */,
 				9A00B9881D87FB1A00184254 /* UITextField+Extension.m in Sources */,
