@@ -17,6 +17,8 @@
 		9A00B9891D87FB1A00184254 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B97E1D87FB1A00184254 /* UIView+Frame.m */; };
 		9A00B98E1D87FB7200184254 /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B98D1D87FB7200184254 /* UIColor+expanded.m */; };
 		9A56BFE81D9A235B00047A5F /* FGNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A56BFE71D9A235B00047A5F /* FGNetworking.m */; };
+		9A56BFEE1D9A508300047A5F /* Hud.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A56BFED1D9A508300047A5F /* Hud.m */; };
+		9A56BFF11D9A512E00047A5F /* UserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A56BFF01D9A512E00047A5F /* UserDefault.m */; };
 		A611A32D1D99212B004384AE /* GRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A611A32C1D99212B004384AE /* GRLoginViewController.m */; };
 		A6A37D741D879BAB003CEAD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A37D731D879BAB003CEAD5 /* main.m */; };
 		A6A37D771D879BAB003CEAD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A37D761D879BAB003CEAD5 /* AppDelegate.m */; };
@@ -79,6 +81,10 @@
 		9A00B98F1D87FC1E00184254 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		9A56BFE61D9A235B00047A5F /* FGNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGNetworking.h; sourceTree = "<group>"; };
 		9A56BFE71D9A235B00047A5F /* FGNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGNetworking.m; sourceTree = "<group>"; };
+		9A56BFEC1D9A508300047A5F /* Hud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hud.h; sourceTree = "<group>"; };
+		9A56BFED1D9A508300047A5F /* Hud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hud.m; sourceTree = "<group>"; };
+		9A56BFEF1D9A512E00047A5F /* userDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userDefault.h; sourceTree = "<group>"; };
+		9A56BFF01D9A512E00047A5F /* UserDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefault.m; sourceTree = "<group>"; };
 		A611A32B1D99212B004384AE /* GRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRLoginViewController.h; sourceTree = "<group>"; };
 		A611A32C1D99212B004384AE /* GRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRLoginViewController.m; sourceTree = "<group>"; };
 		A6A37D6F1D879BAB003CEAD5 /* GREnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GREnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +203,10 @@
 		9A00B9601D87FAF700184254 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				9A56BFEF1D9A512E00047A5F /* userDefault.h */,
+				9A56BFF01D9A512E00047A5F /* UserDefault.m */,
+				9A56BFEC1D9A508300047A5F /* Hud.h */,
+				9A56BFED1D9A508300047A5F /* Hud.m */,
 				9A00B98F1D87FC1E00184254 /* Header.h */,
 			);
 			path = Tools;
@@ -712,9 +722,11 @@
 				9A00B9861D87FB1A00184254 /* UILabel+Extension.m in Sources */,
 				A6A37E5E1D87F8E2003CEAD5 /* GRTweetsViewController.m in Sources */,
 				A6A37E571D87F8E2003CEAD5 /* GRGrammarViewController.m in Sources */,
+				9A56BFEE1D9A508300047A5F /* Hud.m in Sources */,
 				A6A37E581D87F8E2003CEAD5 /* GRHomeViewController.m in Sources */,
 				9A00B98E1D87FB7200184254 /* UIColor+expanded.m in Sources */,
 				A6A37E5F1D87F8E2003CEAD5 /* note.markdown in Sources */,
+				9A56BFF11D9A512E00047A5F /* UserDefault.m in Sources */,
 				9A00B9891D87FB1A00184254 /* UIView+Frame.m in Sources */,
 				A6A37E5B1D87F8E2003CEAD5 /* GRTabBar.m in Sources */,
 				9A00B9821D87FB1A00184254 /* UIBarButtonItem+Extension.m in Sources */,
