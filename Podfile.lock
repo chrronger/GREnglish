@@ -37,6 +37,9 @@ PODS:
   - pop (1.0.9)
   - Reachability (3.2)
   - SDAutoLayout (2.1.7)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
   - ShareSDK3 (3.4.1):
     - ShareSDK3/ShareSDK (= 3.4.1)
   - ShareSDK3/ShareSDK (3.4.1)
@@ -62,6 +65,7 @@ DEPENDENCIES:
   - MOBFoundation
   - pop
   - SDAutoLayout (~> 2.1.7)
+  - SDWebImage (~> 3.8.2)
   - ShareSDK3
   - ShareSDK3/ShareSDKPlatforms/QQ
   - ShareSDK3/ShareSDKPlatforms/SinaWeibo
@@ -80,11 +84,12 @@ SPEC CHECKSUMS:
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDAutoLayout: e9b36d04b8c0b504762a04d76fbbe5108944297a
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   ShareSDK3: e7bcdfeb95338f89efd6fff82b4793d2bfee76f8
   YYCache: 282f35b5b0990833d0b7a06d864a87141a021da2
   YYImage: 362f44ffba1fc498f2152060f3bb54ed84600981
   YYWebImage: 8da75a611fd0d2e0f58a273f9ca0bc731614cb0d
 
-PODFILE CHECKSUM: 14fb7e32844efcd97cedc6c0424202f59dff98f7
+PODFILE CHECKSUM: 5275bfa6d3a9712b60b51c5656cb4cc91ad0a888
 
 COCOAPODS: 1.0.1
