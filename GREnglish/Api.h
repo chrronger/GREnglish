@@ -6,6 +6,10 @@
 //  Copyright © 2016年 sen. All rights reserved.
 //
 
-UIKIT_EXTERN NSString * const BASEURL;
+#import <Foundation/Foundation.h>
 
-UIKIT_EXTERN NSString * const LOGINURL;
+FOUNDATION_EXPORT NSString * const BASEURL;
+
+FOUNDATION_EXPORT NSString * const LOGINURL;
+
+

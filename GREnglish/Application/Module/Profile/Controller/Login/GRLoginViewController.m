@@ -8,6 +8,10 @@
 //
 
 #import "GRLoginViewController.h"
+#import "GRRegisterViewController.h"
+#import "GRLayer.h"
+#import "GRTextField.h"
+#import "GRForgotPswViewController.h"
 
 @interface GRLoginViewController ()
 {
@@ -31,13 +35,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:IMAGE(@"login_background")];
+    
     
     [self setupUI];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
+
 
 #pragma mark - keyboard notification
 - (void)keyBoardWillShow:(NSNotification *)notification
@@ -100,11 +105,11 @@
 {
     if (_userNameView == nil) {
         _userNameView = [[UIView alloc]initWithFrame:CGRectMake(30,CGRectGetMaxY(self.titleImage.frame)+40 ,(SCREEN_WIDTH-60) ,44 )];
-        _userNameView.layer.borderColor = [UIColor whiteColor].CGColor;
-        _userNameView.layer.borderWidth = 0.5;
-        _userNameView.layer.cornerRadius = 22;
+//        _userNameView.layer.borderColor = [UIColor whiteColor].CGColor;
+//        _userNameView.layer.borderWidth = 0.5;
+//        _userNameView.layer.cornerRadius = 22;
 //        _userNameView.layer.masksToBounds = YES;
-        
+        [GRLayer setLayerOval:_userNameView.layer];
         
     }
     return _userNameView;
@@ -114,9 +119,10 @@
 {
     if (_pswView == nil) {
         _pswView = [[UIView alloc]initWithFrame:CGRectMake(30,CGRectGetMaxY(self.userNameView.frame)+20 , (SCREEN_WIDTH-60),44 )];
-        _pswView.layer.borderColor = [UIColor whiteColor].CGColor;
-        _pswView.layer.borderWidth = 0.5;
-        _pswView.layer.cornerRadius = 22;
+//        _pswView.layer.borderColor = [UIColor whiteColor].CGColor;
+//        _pswView.layer.borderWidth = 0.5;
+//        _pswView.layer.cornerRadius = 22;
+        [GRLayer setLayerOval:_pswView.layer];
     }
     return _pswView;
 }
@@ -125,11 +131,12 @@
 {
     if (_userName == nil) {
         _userName = [[UITextField alloc]initWithFrame:CGRectMake(20, 0,CGRectGetWidth(self.userNameView.frame)-40 , 44)];
-        _userName.placeholder = @"用户名／邮箱／手机号";
-        _userName.textAlignment = NSTextAlignmentCenter;
-        _userName.returnKeyType = UIReturnKeyDone;
-        
-        _userName.clearButtonMode = UITextFieldViewModeWhileEditing;
+//        _userName.placeholder = @"用户名／邮箱／手机号";
+//        _userName.textAlignment = NSTextAlignmentCenter;
+//        _userName.returnKeyType = UIReturnKeyDone;
+//        
+//        _userName.clearButtonMode = UITextFieldViewModeWhileEditing;
+        [GRTextField setTextField:_userName placeholder:@"用户名／邮箱／手机号"];
     }
     return _userName;
 }
@@ -138,12 +145,14 @@
 {
     if (_psw == nil) {
         _psw = [[UITextField alloc]initWithFrame:CGRectMake(20, 0,CGRectGetWidth(self.pswView.frame)-40 , 44)];
-        _psw.placeholder = @"密码";
-        _psw.keyboardType = UIKeyboardTypeASCIICapable;
-        _psw.returnKeyType = UIReturnKeyDone;
-        _psw.textAlignment = NSTextAlignmentCenter;
         
-        _psw.clearButtonMode = UITextFieldViewModeWhileEditing;
+        _psw.keyboardType = UIKeyboardTypeASCIICapable;
+//        _psw.placeholder = @"密码";
+//        _psw.returnKeyType = UIReturnKeyDone;
+//        _psw.textAlignment = NSTextAlignmentCenter;
+//        
+//        _psw.clearButtonMode = UITextFieldViewModeWhileEditing;
+        [GRTextField setTextField:_psw placeholder:@"密码"];
     }
     return _psw;
 }
@@ -232,28 +241,25 @@
 - (void)didLogin
 {
     [self.view endEditing:YES];
-    
+    NSDictionary *dic = @{@"type":@"username",@"identifier":@"",@"credential":@""};
+    [FGNetworking requsetWithPath:LOGINURL params:@{} method:Post handleBlcok:^(id response, NSError *error) {
+        
+    }];
 }
 
 - (void)didRegiste
 {
-    
+    [self.navigationController pushViewController:[[GRRegisterViewController alloc]init] animated:YES];
 }
 
 - (void)didForgotPsw
 {
-    
+    [self.navigationController pushViewController:[[GRForgotPswViewController alloc]init] animated:YES];
 }
 
 - (void)didClose
 {
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-#pragma mark - touch
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    [self.view endEditing:YES];
 }
 
 

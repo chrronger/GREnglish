@@ -22,9 +22,8 @@
 		9A56BFEE1D9A508300047A5F /* Hud.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A56BFED1D9A508300047A5F /* Hud.m */; };
 		9A56BFF11D9A512E00047A5F /* UserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A56BFF01D9A512E00047A5F /* UserDefault.m */; };
 		9A8B91C81D9A570200B57AA1 /* GRTweetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8B91C71D9A570200B57AA1 /* GRTweetModel.m */; };
-		A611A32D1D99212B004384AE /* GRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A611A32C1D99212B004384AE /* GRLoginViewController.m */; };
 		A637F42B1D9A6B9E00C41A8A /* GRAccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A637F42A1D9A6B9E00C41A8A /* GRAccountModel.m */; };
-		A637F42E1D9A6BDA00C41A8A /* Api.m in Sources */ = {isa = PBXBuildFile; fileRef = A637F42D1D9A6BDA00C41A8A /* Api.m */; };
+		A651A12F1D9A7480007008AA /* Api.m in Sources */ = {isa = PBXBuildFile; fileRef = A651A12E1D9A7480007008AA /* Api.m */; };
 		A6A37D741D879BAB003CEAD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A37D731D879BAB003CEAD5 /* main.m */; };
 		A6A37D771D879BAB003CEAD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A37D761D879BAB003CEAD5 /* AppDelegate.m */; };
 		A6A37D7D1D879BAB003CEAD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6A37D7B1D879BAB003CEAD5 /* Main.storyboard */; };
@@ -41,6 +40,12 @@
 		A6A37E5D1D87F8E2003CEAD5 /* GRPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A37E4A1D87F8E2003CEAD5 /* GRPublishViewController.m */; };
 		A6A37E5E1D87F8E2003CEAD5 /* GRTweetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A37E501D87F8E2003CEAD5 /* GRTweetsViewController.m */; };
 		A6A37E5F1D87F8E2003CEAD5 /* note.markdown in Sources */ = {isa = PBXBuildFile; fileRef = A6A37E541D87F8E2003CEAD5 /* note.markdown */; };
+		A6DA2A071D9B5AA30076ADD4 /* GRLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DA2A061D9B5AA30076ADD4 /* GRLayer.m */; };
+		A6DA2A0D1D9B65120076ADD4 /* GRTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DA2A0C1D9B65120076ADD4 /* GRTextField.m */; };
+		A6DA2A131D9B6D100076ADD4 /* GRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DA2A101D9B6D100076ADD4 /* GRLoginViewController.m */; };
+		A6DA2A141D9B6D100076ADD4 /* GRRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DA2A121D9B6D100076ADD4 /* GRRegisterViewController.m */; };
+		A6DA2A171D9B6D4A0076ADD4 /* GRForgotPswViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DA2A161D9B6D4A0076ADD4 /* GRForgotPswViewController.m */; };
+		A6DA2A1A1D9B6DF30076ADD4 /* GRBaseLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DA2A191D9B6DF30076ADD4 /* GRBaseLoginViewController.m */; };
 		D5582C0FEE1584325CE0C3C2 /* Pods_GREnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE328CC0C92963C592C3869 /* Pods_GREnglish.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,12 +102,10 @@
 		9A56BFF01D9A512E00047A5F /* UserDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefault.m; sourceTree = "<group>"; };
 		9A8B91C61D9A570200B57AA1 /* GRTweetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRTweetModel.h; sourceTree = "<group>"; };
 		9A8B91C71D9A570200B57AA1 /* GRTweetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRTweetModel.m; sourceTree = "<group>"; };
-		A611A32B1D99212B004384AE /* GRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRLoginViewController.h; sourceTree = "<group>"; };
-		A611A32C1D99212B004384AE /* GRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRLoginViewController.m; sourceTree = "<group>"; };
 		A637F4291D9A6B9E00C41A8A /* GRAccountModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GRAccountModel.h; path = GREnglish/Application/Module/Profile/Controller/GRAccountModel.h; sourceTree = SOURCE_ROOT; };
 		A637F42A1D9A6B9E00C41A8A /* GRAccountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GRAccountModel.m; path = GREnglish/Application/Module/Profile/Controller/GRAccountModel.m; sourceTree = SOURCE_ROOT; };
-		A637F42C1D9A6BDA00C41A8A /* Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Api.h; sourceTree = "<group>"; };
-		A637F42D1D9A6BDA00C41A8A /* Api.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Api.m; sourceTree = "<group>"; };
+		A651A12D1D9A7480007008AA /* Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Api.h; sourceTree = "<group>"; };
+		A651A12E1D9A7480007008AA /* Api.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Api.m; sourceTree = "<group>"; };
 		A6A37D6F1D879BAB003CEAD5 /* GREnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GREnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6A37D731D879BAB003CEAD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A6A37D751D879BAB003CEAD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -136,6 +139,18 @@
 		A6A37E4F1D87F8E2003CEAD5 /* GRTweetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRTweetsViewController.h; sourceTree = "<group>"; };
 		A6A37E501D87F8E2003CEAD5 /* GRTweetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRTweetsViewController.m; sourceTree = "<group>"; };
 		A6A37E541D87F8E2003CEAD5 /* note.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = note.markdown; sourceTree = "<group>"; };
+		A6DA2A051D9B5AA30076ADD4 /* GRLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GRLayer.h; path = GREnglish/Application/Utils/Tools/GRLayer.h; sourceTree = SOURCE_ROOT; };
+		A6DA2A061D9B5AA30076ADD4 /* GRLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GRLayer.m; path = GREnglish/Application/Utils/Tools/GRLayer.m; sourceTree = SOURCE_ROOT; };
+		A6DA2A0B1D9B65120076ADD4 /* GRTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GRTextField.h; path = GREnglish/Application/Utils/Tools/GRTextField.h; sourceTree = SOURCE_ROOT; };
+		A6DA2A0C1D9B65120076ADD4 /* GRTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GRTextField.m; path = GREnglish/Application/Utils/Tools/GRTextField.m; sourceTree = SOURCE_ROOT; };
+		A6DA2A0F1D9B6D100076ADD4 /* GRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRLoginViewController.h; sourceTree = "<group>"; };
+		A6DA2A101D9B6D100076ADD4 /* GRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRLoginViewController.m; sourceTree = "<group>"; };
+		A6DA2A111D9B6D100076ADD4 /* GRRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRRegisterViewController.h; sourceTree = "<group>"; };
+		A6DA2A121D9B6D100076ADD4 /* GRRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRRegisterViewController.m; sourceTree = "<group>"; };
+		A6DA2A151D9B6D4A0076ADD4 /* GRForgotPswViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRForgotPswViewController.h; sourceTree = "<group>"; };
+		A6DA2A161D9B6D4A0076ADD4 /* GRForgotPswViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRForgotPswViewController.m; sourceTree = "<group>"; };
+		A6DA2A181D9B6DF30076ADD4 /* GRBaseLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRBaseLoginViewController.h; sourceTree = "<group>"; };
+		A6DA2A191D9B6DF30076ADD4 /* GRBaseLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRBaseLoginViewController.m; sourceTree = "<group>"; };
 		D8AFF454EF23EFA05AB27714 /* Pods-GREnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GREnglish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GREnglish/Pods-GREnglish.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,9 +254,6 @@
 			isa = PBXGroup;
 			children = (
 				3A978D3B1D9A589B00058210 /* GRUrl.h */,
-				9A56BFEF1D9A512E00047A5F /* userDefault.h */,
-				9A56BFF01D9A512E00047A5F /* UserDefault.m */,
-
 				9A56BFEC1D9A508300047A5F /* Hud.h */,
 				9A56BFED1D9A508300047A5F /* Hud.m */,
 				9A56BFEF1D9A512E00047A5F /* userDefault.h */,
@@ -306,8 +318,8 @@
 				A6A37D761D879BAB003CEAD5 /* AppDelegate.m */,
 				A6A37DDE1D87DE95003CEAD5 /* Config.h */,
 				A6A37DDF1D87DF69003CEAD5 /* GREnglishPrefixHeader.pch */,
-				A637F42C1D9A6BDA00C41A8A /* Api.h */,
-				A637F42D1D9A6BDA00C41A8A /* Api.m */,
+				A651A12D1D9A7480007008AA /* Api.h */,
+				A651A12E1D9A7480007008AA /* Api.m */,
 				A6A37DEF1D87F789003CEAD5 /* Application */,
 				A6A37D831D879BAB003CEAD5 /* Info.plist */,
 				A6A37D7B1D879BAB003CEAD5 /* Main.storyboard */,
@@ -473,8 +485,7 @@
 			children = (
 				A6A37E431D87F8E2003CEAD5 /* GRProfileViewController.h */,
 				A6A37E441D87F8E2003CEAD5 /* GRProfileViewController.m */,
-				A611A32B1D99212B004384AE /* GRLoginViewController.h */,
-				A611A32C1D99212B004384AE /* GRLoginViewController.m */,
+				A6DA2A0E1D9B6D100076ADD4 /* Login */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -491,6 +502,10 @@
 		A6A37E461D87F8E2003CEAD5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A6DA2A051D9B5AA30076ADD4 /* GRLayer.h */,
+				A6DA2A061D9B5AA30076ADD4 /* GRLayer.m */,
+				A6DA2A0B1D9B65120076ADD4 /* GRTextField.h */,
+				A6DA2A0C1D9B65120076ADD4 /* GRTextField.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -553,6 +568,21 @@
 				A6A37E541D87F8E2003CEAD5 /* note.markdown */,
 			);
 			path = Node;
+			sourceTree = "<group>";
+		};
+		A6DA2A0E1D9B6D100076ADD4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A6DA2A181D9B6DF30076ADD4 /* GRBaseLoginViewController.h */,
+				A6DA2A191D9B6DF30076ADD4 /* GRBaseLoginViewController.m */,
+				A6DA2A0F1D9B6D100076ADD4 /* GRLoginViewController.h */,
+				A6DA2A101D9B6D100076ADD4 /* GRLoginViewController.m */,
+				A6DA2A111D9B6D100076ADD4 /* GRRegisterViewController.h */,
+				A6DA2A121D9B6D100076ADD4 /* GRRegisterViewController.m */,
+				A6DA2A151D9B6D4A0076ADD4 /* GRForgotPswViewController.h */,
+				A6DA2A161D9B6D4A0076ADD4 /* GRForgotPswViewController.m */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		E96B0A84681AA0AC63946FB2 /* Frameworks */ = {
@@ -746,7 +776,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A611A32D1D99212B004384AE /* GRLoginViewController.m in Sources */,
 				9A00B9831D87FB1A00184254 /* UIButton+Extension.m in Sources */,
 				A6A37E5D1D87F8E2003CEAD5 /* GRPublishViewController.m in Sources */,
 				A6A37D771D879BAB003CEAD5 /* AppDelegate.m in Sources */,
@@ -755,8 +784,12 @@
 				A6A37E5E1D87F8E2003CEAD5 /* GRTweetsViewController.m in Sources */,
 				A6A37E571D87F8E2003CEAD5 /* GRGrammarViewController.m in Sources */,
 				9A56BFEE1D9A508300047A5F /* Hud.m in Sources */,
+				A6DA2A171D9B6D4A0076ADD4 /* GRForgotPswViewController.m in Sources */,
+				A6DA2A0D1D9B65120076ADD4 /* GRTextField.m in Sources */,
 				A6A37E581D87F8E2003CEAD5 /* GRHomeViewController.m in Sources */,
+				A6DA2A071D9B5AA30076ADD4 /* GRLayer.m in Sources */,
 				9A00B98E1D87FB7200184254 /* UIColor+expanded.m in Sources */,
+				A6DA2A141D9B6D100076ADD4 /* GRRegisterViewController.m in Sources */,
 				A6A37E5F1D87F8E2003CEAD5 /* note.markdown in Sources */,
 				9A56BFF11D9A512E00047A5F /* UserDefault.m in Sources */,
 				9A8B91C81D9A570200B57AA1 /* GRTweetModel.m in Sources */,
@@ -764,15 +797,14 @@
 				A6A37E5B1D87F8E2003CEAD5 /* GRTabBar.m in Sources */,
 				9A00B9821D87FB1A00184254 /* UIBarButtonItem+Extension.m in Sources */,
 				9A56BFE81D9A235B00047A5F /* FGNetworking.m in Sources */,
+				A6DA2A131D9B6D100076ADD4 /* GRLoginViewController.m in Sources */,
+				A6DA2A1A1D9B6DF30076ADD4 /* GRBaseLoginViewController.m in Sources */,
 				A6A37E5C1D87F8E2003CEAD5 /* GRProfileViewController.m in Sources */,
-
 				3A978D3A1D9A291900058210 /* GRAllCategoryModel.m in Sources */,
-
-				A637F42E1D9A6BDA00C41A8A /* Api.m in Sources */,
-
 				9A00B9871D87FB1A00184254 /* UITableView+Extension.m in Sources */,
 				A637F42B1D9A6B9E00C41A8A /* GRAccountModel.m in Sources */,
 				A6A37D741D879BAB003CEAD5 /* main.m in Sources */,
+				A651A12F1D9A7480007008AA /* Api.m in Sources */,
 				A6A37E5A1D87F8E2003CEAD5 /* GRTabBarViewController.m in Sources */,
 				3A978D371D9A18B000058210 /* HomeHeaderView.m in Sources */,
 				9A00B9851D87FB1A00184254 /* UIImage+Common.m in Sources */,

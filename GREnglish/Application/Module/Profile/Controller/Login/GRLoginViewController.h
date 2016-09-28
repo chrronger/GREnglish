@@ -6,8 +6,8 @@
 //  Copyright © 2016年 sen. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GRBaseLoginViewController.h"
 
-@interface GRLoginViewController : UIViewController
+@interface GRLoginViewController : GRBaseLoginViewController
 
 @end

@@ -33,6 +33,7 @@
     [self addChildControllers];
 }
 
+
 - (void)addChildControllers
 {
     [self addChildController:[[GRHomeViewController alloc]init] title:@"首页" imageStr:@"tabbar_video_icon_normal" selectedImage:@"tabbar_video_icon_selected"];
@@ -63,7 +64,9 @@
 - (void)didAddButtonClick:(UIButton *)button
 {
     //
-    [self presentViewController:[[GRLoginViewController alloc]init] animated:YES completion:nil];
+    GRLoginViewController *login = [[GRLoginViewController alloc]init];
+    GRNavigationController *nav = [[GRNavigationController alloc]initWithRootViewController:login];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 
