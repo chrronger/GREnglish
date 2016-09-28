@@ -90,6 +90,10 @@ SPEC CHECKSUMS:
   YYImage: 362f44ffba1fc498f2152060f3bb54ed84600981
   YYWebImage: 8da75a611fd0d2e0f58a273f9ca0bc731614cb0d
 
+<<<<<<< Updated upstream
 PODFILE CHECKSUM: 5275bfa6d3a9712b60b51c5656cb4cc91ad0a888
+=======
+PODFILE CHECKSUM: 1ba2ed7fea0a2bc056b52da944adaffaa2059eff
+>>>>>>> Stashed changes
 
 COCOAPODS: 1.0.1

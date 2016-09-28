@@ -33,6 +33,7 @@
 #import "MJExtension.h"
 #import "SDAutoLayout.h"
 #import "MJRefresh.h"
+#import "UIImageView+WebCache.h"
 
 #endif
 
@@ -59,8 +60,3 @@
 
 #endif /* GREnglishPrefixHeader_pch */
 
-
-
-
-#define ALLCategoryUrl  @"http://english.6ag.cn/api/getAllCategories.api"
-#define  http://www.english.com/api/getVideoInfosList.api

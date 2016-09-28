@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3A978D371D9A18B000058210 /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A978D361D9A18B000058210 /* HomeHeaderView.m */; };
 		3A978D3A1D9A291900058210 /* GRAllCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A978D391D9A291900058210 /* GRAllCategoryModel.m */; };
+		3A978D401D9A613F00058210 /* GRVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A978D3F1D9A613F00058210 /* GRVideoModel.m */; };
+		3A978D431D9B9E0100058210 /* GRHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A978D421D9B9E0100058210 /* GRHomeCell.m */; };
 		9A00B9811D87FB1A00184254 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B96E1D87FB1A00184254 /* NSString+Extension.m */; };
 		9A00B9821D87FB1A00184254 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B9701D87FB1A00184254 /* UIBarButtonItem+Extension.m */; };
 		9A00B9831D87FB1A00184254 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B9721D87FB1A00184254 /* UIButton+Extension.m */; };
@@ -79,6 +81,10 @@
 		3A978D381D9A291900058210 /* GRAllCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRAllCategoryModel.h; sourceTree = "<group>"; };
 		3A978D391D9A291900058210 /* GRAllCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRAllCategoryModel.m; sourceTree = "<group>"; };
 		3A978D3B1D9A589B00058210 /* GRUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRUrl.h; sourceTree = "<group>"; };
+		3A978D3E1D9A613F00058210 /* GRVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRVideoModel.h; sourceTree = "<group>"; };
+		3A978D3F1D9A613F00058210 /* GRVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRVideoModel.m; sourceTree = "<group>"; };
+		3A978D411D9B9E0100058210 /* GRHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRHomeCell.h; sourceTree = "<group>"; };
+		3A978D421D9B9E0100058210 /* GRHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRHomeCell.m; sourceTree = "<group>"; };
 		66DEEA0867E34D58BEE7EE4B /* Pods-GREnglish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GREnglish.release.xcconfig"; path = "Pods/Target Support Files/Pods-GREnglish/Pods-GREnglish.release.xcconfig"; sourceTree = "<group>"; };
 		7CE328CC0C92963C592C3869 /* Pods_GREnglish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GREnglish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A00B96D1D87FB1A00184254 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
@@ -217,6 +223,8 @@
 			children = (
 				3A978D381D9A291900058210 /* GRAllCategoryModel.h */,
 				3A978D391D9A291900058210 /* GRAllCategoryModel.m */,
+				3A978D3E1D9A613F00058210 /* GRVideoModel.h */,
+				3A978D3F1D9A613F00058210 /* GRVideoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,6 +234,8 @@
 			children = (
 				3A978D351D9A18B000058210 /* HomeHeaderView.h */,
 				3A978D361D9A18B000058210 /* HomeHeaderView.m */,
+				3A978D411D9B9E0100058210 /* GRHomeCell.h */,
+				3A978D421D9B9E0100058210 /* GRHomeCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -822,7 +832,10 @@
 				A6A37E5D1D87F8E2003CEAD5 /* GRPublishViewController.m in Sources */,
 				A6A37D771D879BAB003CEAD5 /* AppDelegate.m in Sources */,
 				A6A37E591D87F8E2003CEAD5 /* GRNavigationController.m in Sources */,
+
 				9A8B91D81D9A73B000B57AA1 /* SDPhotoBrowser.m in Sources */,
+
+				3A978D431D9B9E0100058210 /* GRHomeCell.m in Sources */,
 				9A00B9861D87FB1A00184254 /* UILabel+Extension.m in Sources */,
 				A6A37E5E1D87F8E2003CEAD5 /* GRTweetsViewController.m in Sources */,
 				A6A37E571D87F8E2003CEAD5 /* GRGrammarViewController.m in Sources */,
@@ -841,6 +854,7 @@
 				9A00B9891D87FB1A00184254 /* UIView+Frame.m in Sources */,
 				A6A37E5B1D87F8E2003CEAD5 /* GRTabBar.m in Sources */,
 				9A00B9821D87FB1A00184254 /* UIBarButtonItem+Extension.m in Sources */,
+				3A978D401D9A613F00058210 /* GRVideoModel.m in Sources */,
 				9A56BFE81D9A235B00047A5F /* FGNetworking.m in Sources */,
 				A6DA2A131D9B6D100076ADD4 /* GRLoginViewController.m in Sources */,
 				A6DA2A1A1D9B6DF30076ADD4 /* GRBaseLoginViewController.m in Sources */,
