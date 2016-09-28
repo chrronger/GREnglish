@@ -8,6 +8,14 @@
 
 #import "GRBaseLoginViewController.h"
 
+@protocol GRRegisterViewControllerDelegate <NSObject>
+
+- (void)registerSuccessWithUsername:(NSString *)username psw:(NSString *)psw;
+
+@end
+
 @interface GRRegisterViewController : GRBaseLoginViewController
+
+@property(nonatomic,assign)id <GRRegisterViewControllerDelegate>delegate;
 
 @end

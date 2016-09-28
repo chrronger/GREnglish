@@ -10,7 +10,7 @@
 #import "GRLayer.h"
 #import "GRTextField.h"
 
-@interface GRRegisterViewController ()
+@interface GRRegisterViewController ()<UITextFieldDelegate>
 {
     CGFloat _width;
 }
@@ -24,6 +24,7 @@
 @property(nonatomic,strong)UITextField *pswAgain;
 
 
+
 @end
 
 @implementation GRRegisterViewController
@@ -34,6 +35,7 @@
 //     self.view.backgroundColor = [UIColor colorWithPatternImage:IMAGE(@"login_background")];
     
      _width = SCREEN_WIDTH-60;
+
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
@@ -105,6 +107,8 @@
         _registe.titleLabel.font = FONT(16);
         _registe.titleLabel.textAlignment = NSTextAlignmentCenter;
         [_registe addTarget:self action:@selector(didRegister) forControlEvents:UIControlEventTouchUpInside];
+        
+        _registe.enabled = NO;
     }
     return _registe;
 }
@@ -142,6 +146,9 @@
         _pswAgain = [[UITextField alloc]initWithFrame:CGRectMake(20, 0, CGRectGetWidth(self.pswAgainView.frame)-40, 44)];
         _pswAgain.keyboardType = UIKeyboardTypeASCIICapable;
         [GRTextField setTextField:_pswAgain placeholder:@"再次输入密码"];
+        [_pswAgain addTarget:self action:@selector(didTextChanged:) forControlEvents:UIControlEventEditingChanged];
+        _pswAgain.delegate = self;
+        _pswAgain.secureTextEntry = YES;
     }
     return _pswAgain;
 }
@@ -152,6 +159,9 @@
         _psw = [[UITextField alloc]initWithFrame:CGRectMake(20, 0, CGRectGetWidth(self.pswView.frame)-40, 44)];
         _psw.keyboardType = UIKeyboardTypeASCIICapable;
         [GRTextField setTextField:_psw placeholder:@"密码"];
+        [_psw addTarget:self action:@selector(didTextChanged:) forControlEvents:UIControlEventEditingChanged];
+        _psw.delegate = self;
+        _psw.secureTextEntry = YES;
     }
     return _psw;
     
@@ -162,6 +172,8 @@
     if (_userName == nil) {
         _userName = [[UITextField alloc]initWithFrame:CGRectMake(20, 0, CGRectGetWidth(self.userNameView.frame)-40, 44)];
         [GRTextField setTextField:_userName placeholder:@"用户名"];
+        [_userName addTarget:self action:@selector(didTextChanged:) forControlEvents:UIControlEventEditingChanged];
+        _userName.delegate = self;
     }
     return _userName;
 }
@@ -169,7 +181,44 @@
 #pragma mark -action
 - (void)didRegister
 {
+    [self.view endEditing:YES];
     
+    if (self.psw.text != self.pswAgain.text) {
+        [Hud showTipsText:@"两次输入密码不一致"];
+        return;
+    }
+    
+    [Hud showActivityIndicator];
+    
+    [GRAccountModel registerAccountWithType:@"username" username:self.userName.text psw:self.psw.text resultBlock:^(NSDictionary *data, NSError *error) {
+        if ([data[@"status"] isEqualToString:@"success"]) {
+            [Hud hideHubAfterTime:0];
+            [Hud showTipsText:@"注册成功"];
+            
+            [self didBack];
+           
+            if ([self.delegate respondsToSelector:@selector(registerSuccessWithUsername:psw:)]) {
+                [self.delegate registerSuccessWithUsername:self.userName.text psw:self.psw.text];
+            }
+            
+            
+        }else{
+            [Hud hideHubAfterTime:3];
+            [Hud showTipsText:data[@"message"]];
+        }
+    }];
+    
+}
+
+- (void)didTextChanged:(UITextField *)textField
+{
+    if (self.userName.text.length >=5 && self.psw.text.length >5 && self.pswAgain.text.length >5) {
+        self.registe.enabled = YES;
+        self.registe.backgroundColor = HEXCOLOR(@"00ac59");
+    }else{
+        self.registe.enabled = NO;
+        self.registe.backgroundColor = HEXCOLOR(@"6d8579");
+    }
 }
 
 - (void)didBack
@@ -178,6 +227,16 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+#pragma mark -textField - delegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    if ([textField isEqual:self.pswAgain]) {
+         [self didRegister];
+    }
+   
+    return YES;
+}
 
 #pragma mark - dealloc
 - (void)dealloc

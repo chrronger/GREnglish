@@ -12,4 +12,7 @@ NSString * const BASEURL = @"http://english.6ag.cn/";
 
 NSString *const LOGINURL= @"api/auth/login.api";
 
+NSString *const REGISTERURL = @"api/auth/register.api";
+
+NSString *const FINDPSW = @"api/auth/retrievePasswordWithSendEmail.api";
 

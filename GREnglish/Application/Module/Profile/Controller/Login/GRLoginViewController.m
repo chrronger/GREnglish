@@ -13,7 +13,7 @@
 #import "GRTextField.h"
 #import "GRForgotPswViewController.h"
 
-@interface GRLoginViewController ()
+@interface GRLoginViewController ()<UITextFieldDelegate,GRRegisterViewControllerDelegate>
 {
     
 }
@@ -35,6 +35,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //username:tttttt psw:111111
     
     
     [self setupUI];
@@ -96,7 +97,7 @@
 {
     if (_titleImage == nil) {
         _titleImage = [[UIImageView alloc]initWithImage:IMAGE(@"Welcome")];
-        _titleImage.frame = CGRectMake((SCREEN_WIDTH-_titleImage.frame.size.width)/2, 230, 180, 35);
+        _titleImage.frame = CGRectMake((SCREEN_WIDTH-_titleImage.frame.size.width)/2, (SCREEN_HEIGHT-437), 180, 35);
     }
     return _titleImage;
 }
@@ -137,6 +138,8 @@
 //        
 //        _userName.clearButtonMode = UITextFieldViewModeWhileEditing;
         [GRTextField setTextField:_userName placeholder:@"用户名／邮箱／手机号"];
+        _userName.delegate = self;
+        [_userName addTarget:self action:@selector(didTextChanged:) forControlEvents:UIControlEventEditingChanged];
     }
     return _userName;
 }
@@ -153,6 +156,9 @@
 //        
 //        _psw.clearButtonMode = UITextFieldViewModeWhileEditing;
         [GRTextField setTextField:_psw placeholder:@"密码"];
+        _psw.delegate = self;
+        _psw.secureTextEntry = YES;
+         [_psw addTarget:self action:@selector(didTextChanged:) forControlEvents:UIControlEventEditingChanged];
     }
     return _psw;
 }
@@ -171,6 +177,7 @@
         _loginButton.backgroundColor = HEXCOLOR(@"6d8579");
         _loginButton.layer.cornerRadius = 22;
         
+        _loginButton.enabled = NO;
     }
     return _loginButton;
 }
@@ -241,15 +248,29 @@
 - (void)didLogin
 {
     [self.view endEditing:YES];
-    NSDictionary *dic = @{@"type":@"username",@"identifier":@"",@"credential":@""};
-    [FGNetworking requsetWithPath:LOGINURL params:@{} method:Post handleBlcok:^(id response, NSError *error) {
-        
+    [Hud showTipsText:@"正在登录"];
+    
+    [GRAccountModel loginAccountWithType:@"username" username:self.userName.text psw:self.psw.text resultBlock:^(NSDictionary *data, NSError *error) {
+        if ([data[@"status"] isEqualToString:@"success"]) {
+            [Hud hideHubAfterTime:0];
+            [self didClose];
+            //保存
+            writeToPlist((@{@"username":self.userName.text,@"psw":self.psw.text}));
+            
+            
+        }else{
+            [Hud hideHubAfterTime:0];
+            [Hud showTipsText:data[@"message"]];
+        }
     }];
+    
 }
 
 - (void)didRegiste
 {
-    [self.navigationController pushViewController:[[GRRegisterViewController alloc]init] animated:YES];
+    GRRegisterViewController *registerVC = [[GRRegisterViewController alloc]init];
+    registerVC.delegate = self;
+    [self.navigationController pushViewController:registerVC animated:YES];
 }
 
 - (void)didForgotPsw
@@ -262,8 +283,42 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)didTextChanged:(UITextField *)textField
+{
+    if (self.userName.text.length >= 5 && self.psw.text.length >5) {
+        self.loginButton.enabled = YES;
+        self.loginButton.backgroundColor = HEXCOLOR(@"00ac59");
+    }else{
+        self.loginButton.enabled = NO;
+        self.loginButton.backgroundColor = HEXCOLOR(@"6d8579");
+    }
+}
 
 
+#pragma mark -textField - delegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    if ([textField isEqual:self.psw]) {
+        [self didLogin];
+    }
+    
+    return YES;
+}
+
+#pragma mark -GRRegisterVC - delegate
+//注册成功后
+- (void)registerSuccessWithUsername:(NSString *)username psw:(NSString *)psw
+{
+    self.userName.text = username;
+    self.psw.text = psw;
+    [self didTextChanged:nil];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self didLogin];
+    });
+    
+}
 
 #pragma mark - remove notification
 - (void)dealloc

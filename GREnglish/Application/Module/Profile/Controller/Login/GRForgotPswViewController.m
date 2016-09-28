@@ -10,7 +10,7 @@
 #import "GRLayer.h"
 #import "GRTextField.h"
 
-@interface GRForgotPswViewController ()
+@interface GRForgotPswViewController ()<UITextFieldDelegate>
 {
     CGFloat _width;
 }
@@ -119,6 +119,9 @@
         _email = [[UITextField alloc]initWithFrame:CGRectMake(20, 0, CGRectGetWidth(self.emailView.frame)-40, 44)];
         _email.keyboardType = UIKeyboardTypeASCIICapable;
         [GRTextField setTextField:_email placeholder:@"邮箱"];
+        _email.delegate = self;
+        [_email addTarget:self action:@selector(didTextChanged:) forControlEvents:UIControlEventEditingChanged];
+        
     }
     return _email;
 }
@@ -128,7 +131,10 @@
     if (_userName == nil) {
         _userName = [[UITextField alloc]initWithFrame:CGRectMake(20, 0, CGRectGetWidth(self.userNameView.frame)-40, 44)];
         _userName.keyboardType = UIKeyboardTypeASCIICapable;
-        [GRTextField setTextField:_userName placeholder:@"密码"];
+        [GRTextField setTextField:_userName placeholder:@"用户名"];
+        _userName.delegate =self;
+        [_userName addTarget:self action:@selector(didTextChanged:) forControlEvents:UIControlEventEditingChanged];
+
     }
     return _userName;
     
@@ -139,7 +145,32 @@
 
 - (void)didFindPsw
 {
+    [self.view endEditing:YES];
     
+    [Hud showTipsText:@"正在发送"];
+    
+    [GRAccountModel findPswWithUsername:self.userName.text email:self.email.text resultBlock:^(NSDictionary *data, NSError *error) {
+        if ([data[@"status"] isEqualToString:@"success"]) {
+            [Hud showTipsText:@"发送成功，请查看邮箱"];;
+            [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+   
+        }else{
+            [Hud showTipsText:data[@"message"]];
+        }
+    }];
+    
+}
+
+- (void)didTextChanged:(UITextField *)textField
+{
+    if (self.userName.text.length >=5 && self.email.text.length >= 5 ) {
+        self.findPsw.enabled = YES;
+        self.findPsw.backgroundColor = HEXCOLOR(@"00ac59");
+    }else{
+        self.findPsw.enabled = NO;
+        self.findPsw.backgroundColor = HEXCOLOR(@"6d8579");
+    }
+
 }
 
 - (void)didBack
@@ -147,6 +178,20 @@
     [self.view endEditing:YES];
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+#pragma mark -textField - delegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    if ([textField isEqual:self.email]) {
+        [self didFindPsw];
+    }
+    
+    return YES;
+}
+
+
+
 
 #pragma mark - dealloc
 - (void)dealloc

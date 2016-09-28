@@ -9,7 +9,7 @@
 #import "Hud.h"
 
 #define kHudTag 10000
-#define kBezelViewWidth 200
+#define kBezelViewWidth 300
 #define kBezelViewHeigh 200
 #define screenWidth [UIScreen mainScreen].bounds.size.width
 #define screenHeight [UIScreen mainScreen].bounds.size.height
@@ -23,7 +23,7 @@
 
 + (void)showTipsText:(NSString *)text
 {
-    [Hud showHubWithModel:MBProgressHUDModeText text:text customView:nil during:2 userInteractionEnabled:YES];
+    [Hud showHubWithModel:MBProgressHUDModeText text:text customView:nil during:0.5 userInteractionEnabled:YES];
 }
 
 + (void)showProgress:(MBProgressHUDMode)progressStyle
