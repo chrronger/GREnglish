@@ -16,6 +16,7 @@
 
 @implementation GRAccountModel
 
+//注册
 + (void)registerAccountWithType:(NSString *)type username:(NSString *)username psw:(NSString *)psw resultBlock:(void (^)(NSDictionary *data, NSError *error))resultBlock
 {
     NSDictionary *parames = @{@"type":type, @"identifier":username,@"credential":psw};
@@ -32,7 +33,7 @@
     
 }
 
-
+//普通账号登录
 + (void)loginAccountWithType:(NSString *)type username:(NSString *)username psw:(NSString *)psw resultBlock:(void (^)(NSDictionary *data, NSError *error))resultBlock;
 {
     NSDictionary *parames = @{@"type":type, @"identifier":username,@"credential":psw};
@@ -40,7 +41,8 @@
         NSDictionary *dic = (NSDictionary *)response;
         GRLog(@"--------------------用户登录-----------------%@",dic);
         if ([dic[@"status"] isEqualToString:@"success"]) {
-            
+            GRAccountModel *model = [GRAccountModel mj_objectWithKeyValues:dic[@"result"]];
+            [model saveUserInfo];
             resultBlock(dic,nil);
   
         }else{
@@ -49,6 +51,7 @@
     }];
 }
 
+//邮箱找回密码
 + (void)findPswWithUsername:(NSString *)username email:(NSString *)email resultBlock:(void (^)(NSDictionary *data, NSError *error))resultBlock
 {
     //绑定的邮箱
@@ -67,7 +70,21 @@
 
 }
 
-//解档
++ (instancetype)shareAccount
+{
+    static GRAccountModel *_account;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _account = [[self alloc]init];
+        
+        [self mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+            return @{@"Id":@"id"};
+        }];
+    });
+    return _account;
+}
+
+//
 - (GRAccountModel *)unarchiverAccount
 {
     if (self.accountModel == nil) {
@@ -81,8 +98,33 @@
 
 - (BOOL)isLogin
 {
+    //func isLogin(controller: UIViewController) -> Bool {
+    
+//    if JFAccountModel.isLogin() {
+//        return true
+//    } else {
+//        let loginVc = JFNavigationController(rootViewController: JFLoginViewController(nibName: "JFLoginViewController", bundle: nil))
+//        controller.presentViewController(loginVc, animated: true, completion: {
+//            print("弹出登录界面")
+//        })
+//        return false
+//    }
+
+
     return [self unarchiverAccount] != nil;
 }
+
+- (void)logout
+{
+    
+}
+//
+- (void)saveUserInfo
+{
+    self.accountModel = self;
+    [self saveAccountInfo];
+}
+
 
 //归档用户数据
 - (void)saveAccountInfo
@@ -100,7 +142,7 @@
     
     [aCoder encodeObject:self.token forKey: @"token_key"];
     [aCoder encodeObject:self.expiryTime forKey: @"expiry_time_key"];
-    [aCoder encodeInt:self.id forKey: @"id_key"];
+    [aCoder encodeInt:self.Id forKey: @"id_key"];
     [aCoder encodeObject:self.nickname forKey: @"nickname_key"];
     [aCoder encodeObject:self.say forKey: @"say_key"];
     [aCoder encodeObject:self.avatar forKey: @"avatar_key"];
@@ -125,7 +167,7 @@
     if (self = [super init]) {
         self.token = [aDecoder decodeObjectForKey:@"token_key"];
         self.expiryTime = [aDecoder decodeObjectForKey:@"expiry_time_key"];
-        self.id = [aDecoder decodeIntForKey:@"id_key"];
+        self.Id = [aDecoder decodeIntForKey:@"id_key"];
         self.nickname = [aDecoder decodeObjectForKey:@"nickname_key"];
         self.say = [aDecoder decodeObjectForKey:@"say_key"];
         self.avatar = [aDecoder decodeObjectForKey:@"avatar_key"];

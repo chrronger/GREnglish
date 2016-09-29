@@ -11,7 +11,7 @@
 @interface GRAccountModel : NSObject
 
 @property(nonatomic,copy)NSString *token;
-@property(nonatomic,assign)int id;
+@property(nonatomic,assign)int Id;
 //是否显示广告 0显示 1不显示
 @property(nonatomic,assign)int adDsabled;
 @property(nonatomic,copy)NSString *nickname;
@@ -33,12 +33,14 @@
 @property(nonatomic,copy)NSString *expiryTime;
 
 
-//解档账号信息
-- (void)archiverAccount;
++ (instancetype)shareAccount;
+//账号信息
+- (GRAccountModel *)unarchiverAccount;
 
 //当前是否登录
 - (BOOL)isLogin;
 
+- (void)logout;
 
 //注册
 + (void)registerAccountWithType:(NSString *)type username:(NSString *)username psw:(NSString *)psw resultBlock:(void (^)(NSDictionary *data, NSError *error))resultBlock;

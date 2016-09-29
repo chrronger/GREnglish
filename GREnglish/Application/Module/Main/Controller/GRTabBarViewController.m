@@ -64,9 +64,11 @@
 - (void)didAddButtonClick:(UIButton *)button
 {
     //
-    GRLoginViewController *login = [[GRLoginViewController alloc]init];
-    GRNavigationController *nav = [[GRNavigationController alloc]initWithRootViewController:login];
-    [self presentViewController:nav animated:YES completion:nil];
+    
+    GRNavigationController *tweet = [[GRNavigationController alloc]initWithRootViewController:[[GRPublishViewController alloc]init]];
+    GRNavigationController *login = [[GRNavigationController alloc]initWithRootViewController:[[GRLoginViewController alloc]init]];
+    UIViewController *vc = [[GRAccountModel shareAccount] isLogin] ? tweet : login;
+    [self presentViewController:vc  animated:YES completion:nil];
 }
 
 
