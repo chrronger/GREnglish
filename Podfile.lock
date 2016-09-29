@@ -34,25 +34,25 @@ PODS:
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
-  - MOBFoundation (2.0.10)
+  - MOBFoundation (2.0.11)
   - pop (1.0.9)
   - Reachability (3.2)
   - SDAutoLayout (2.1.7)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
-  - ShareSDK3 (3.4.1):
-    - ShareSDK3/ShareSDK (= 3.4.1)
-  - ShareSDK3/ShareSDK (3.4.1)
-  - ShareSDK3/ShareSDKPlatforms/QQ (3.4.1)
-  - ShareSDK3/ShareSDKPlatforms/SinaWeibo (3.4.1)
-  - ShareSDK3/ShareSDKPlatforms/WeChat (3.4.1)
-  - ShareSDK3/ShareSDKUI (3.4.1)
-  - YYCache (1.0.3)
-  - YYImage (1.0.3):
-    - YYImage/Core (= 1.0.3)
-  - YYImage/Core (1.0.3)
-  - YYWebImage (1.0.3):
+  - ShareSDK3 (3.4.2):
+    - ShareSDK3/ShareSDK (= 3.4.2)
+  - ShareSDK3/ShareSDK (3.4.2)
+  - ShareSDK3/ShareSDKPlatforms/QQ (3.4.2)
+  - ShareSDK3/ShareSDKPlatforms/SinaWeibo (3.4.2)
+  - ShareSDK3/ShareSDKPlatforms/WeChat (3.4.2)
+  - ShareSDK3/ShareSDKUI (3.4.2)
+  - YYCache (1.0.4)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+  - YYWebImage (1.0.5):
     - YYCache
     - YYImage
 
@@ -83,16 +83,17 @@ SPEC CHECKSUMS:
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
-  MOBFoundation: be1a5556482800c5c3515f8fbd32770a6622bd42
+  MOBFoundation: e213065e65eebd8146ab29d10a8445dc8f385091
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDAutoLayout: e9b36d04b8c0b504762a04d76fbbe5108944297a
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
-  ShareSDK3: e7bcdfeb95338f89efd6fff82b4793d2bfee76f8
-  YYCache: 282f35b5b0990833d0b7a06d864a87141a021da2
-  YYImage: 362f44ffba1fc498f2152060f3bb54ed84600981
-  YYWebImage: 8da75a611fd0d2e0f58a273f9ca0bc731614cb0d
+  ShareSDK3: 2fa975dd22937fc7de3f6b5d0c41a18ba0dd1661
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+  YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
 PODFILE CHECKSUM: cd74886616ed2acd643305650c25e63291f4018f
+PODFILE CHECKSUM: 56ecc037415832ba2af0e945eee814ab8c5b76e4
 
 COCOAPODS: 1.1.0.beta.2

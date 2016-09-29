@@ -17,7 +17,16 @@
 
 +(NSDictionary *)mj_objectClassInArray
 {
-    return @{@"author":@"Author"};
+    return @{@"author":@"Author",
+             @"extendsAuthor":@"GRExtendsAuthor"};
+}
+@end
+
+@implementation GRExtendsAuthor
+
++(NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{@"ID":@"id"};
 }
 @end
 

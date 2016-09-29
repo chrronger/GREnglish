@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "GRAuthor.h"
 
-
+//动弹模型
 @interface GRTweetListModel : NSObject
 
 @property (nonatomic, assign) NSInteger ID;
@@ -23,8 +23,7 @@
 @property (nonatomic, strong) NSArray *images;
 @end
 
-
-
+//动弹列表请求参数模型
 @interface TweetListParm : NSObject
 
 @property (nonatomic, copy)   NSString *type;

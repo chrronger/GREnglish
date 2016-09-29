@@ -65,9 +65,16 @@
     _model = model;
     [iconBtn sd_setBackgroundImageWithURL:[NSURL URLWithString:model.author.avatar] forState:UIControlStateNormal];
     nameLabel.text = model.author.nickname;
-    genderImgView.image =  [UIImage imageNamed:@"girl_dongtai"];
+    genderImgView.image =  (model.author.sex > 0) ? [UIImage imageNamed:@"boy_dongtai"] : [UIImage imageNamed:@"girl_dongtai"];
     timeLabel.text = model.publishTime;
-    contentLabel.text = model.content;
+    if (model.extendsAuthor.nickname.length > 0)
+    {
+        contentLabel.text = [NSString stringWithFormat:@"回复 @%@: %@",model.extendsAuthor.nickname, model.content];
+    }else
+    {
+        contentLabel.text = model.content;
+    }
+    
     [self setupAutoHeightWithBottomView:contentLabel bottomMargin:15];
 }
 

@@ -26,5 +26,6 @@ pod 'ASIHTTPRequest', '~> 1.8.2'
 pod 'SDAutoLayout', '~> 2.1.7'
 pod 'MJExtension', '~> 3.0.13'
 pod 'SDWebImage', '~> 3.8.2'
+pod 'SDCycleScrollView', '~> 1.65'
 
 end

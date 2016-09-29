@@ -12,7 +12,7 @@
 #import "GRTweetDetailCell.h"
 #import "InPutView.h"
 
-@interface GRTweetDetailController ()<UITableViewDelegate,UITableViewDataSource>
+@interface GRTweetDetailController ()<UITableViewDelegate,UITableViewDataSource,InPutViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *tweetList;
@@ -20,7 +20,8 @@
 
 @implementation GRTweetDetailController
 {
-    TweetCommonParm *parm;
+    TweetCommonParm *parm;//请求评论列表参数
+    GRCommentPostParm *postParm;
     InPutView *inputView;
 }
 
@@ -41,6 +42,13 @@
     parm.count = @10;
     parm.source_id = [NSNumber numberWithInteger:self.model.ID];
     self.tweetList = [[NSMutableArray alloc] initWithCapacity:10];
+    
+    postParm = [[GRCommentPostParm alloc] init];
+    postParm.type = @"tweet";
+    postParm.sourceId = [NSNumber numberWithInteger:self.model.ID];
+    postParm.user_id = [NSNumber numberWithInteger:self.model.author.ID];
+    postParm.pid = 0;
+    
 }
 
 - (void)PullToReloadData
@@ -93,11 +101,20 @@
     [self.view addSubview:_tableView];
     
     inputView = [[InPutView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT-40-64, SCREEN_WIDTH, 40)];
-    inputView.sendMsgBlock = ^(NSString *msg){
-        
-    };
+    inputView.delegate = self;
     [self.view addSubview:inputView];
 
+}
+
+#pragma mark - InPutViewDelegate
+- (void)inPutViewDidSendMsg:(NSString *)message
+{
+    if (message.length > 0)
+    {
+        postParm.content = message;
+        //发送评论请求
+        
+    }
 }
 
 #pragma mark - UITableView DataSource
@@ -143,6 +160,26 @@
         return [tableView cellHeightForIndexPath:indexPath model:model keyPath:@"model" cellClass:[GRTweetDetailCell class] contentViewWidth:[self cellContentViewWith]];
     }
     
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0)
+    {
+        postParm.pid = 0;
+    }else
+    {
+        GRTweetCommentModel *model = self.tweetList[indexPath.row];
+        postParm.pid = [NSNumber numberWithInteger:model.author.ID];
+        inputView.isOpen = !inputView.isOpen;
+        if (inputView.isOpen) {
+            inputView.prompt = [NSString stringWithFormat:@"@%@",model.author.nickname];
+            [inputView riseKeyBoard];
+            
+        }else{
+            [inputView getDownKeyBoard];
+        }
+    }
 }
 
 - (CGFloat)cellContentViewWith

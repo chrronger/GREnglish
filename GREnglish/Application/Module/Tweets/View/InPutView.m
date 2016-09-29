@@ -16,8 +16,6 @@
 #define screenWidth SCREEN_BOUNDS.size.width
 #define SCREEN_HEIGHT SCREEN_BOUNDS.size.height
 
-static NSString *prompt = @"请输入评论内容";
-
 @implementation InPutView
 {
     NSInteger curRow;
@@ -43,7 +41,7 @@ static NSString *prompt = @"请输入评论内容";
 {
     curRow = 1;
     orginalFrame = self.frame;
-    oneRowHeight = [prompt getHeightWithLimitWidth:screenWidth fontSize:17];//单行文本高度
+    oneRowHeight = [self.prompt getHeightWithLimitWidth:screenWidth fontSize:17];//单行文本高度
     topSpace = (kTextViewHeight-oneRowHeight)/2;
     self.backgroundColor = RGBColor(230, 230, 230, 1);
     
@@ -53,7 +51,8 @@ static NSString *prompt = @"请输入评论内容";
     self.textView.returnKeyType = UIReturnKeySend;
     self.textView.font = [UIFont systemFontOfSize:15];
     self.textView.textColor = [UIColor blackColor];
-    self.textView.text = prompt;
+    self.prompt = @"请输入评论内容";
+    self.textView.text = self.prompt;
     self.textView.delegate = self;
     [self.textView configBorderWidth:1 borderColor:UIColorFromRGB(0xffffff) cornerRadius:5];
     [self addSubview:self.textView];
@@ -86,6 +85,7 @@ static NSString *prompt = @"请输入评论内容";
 #pragma mark - UITextViewDelegate
 - (void)textViewDidBeginEditing:(UITextView *)textView
 {
+    self.isOpen = YES;
     textView.text = nil;
     [textView becomeFirstResponder];
 }
@@ -120,9 +120,12 @@ static NSString *prompt = @"请输入评论内容";
         if (self.sendMsgBlock) {
             self.sendMsgBlock(textView.text);
         }
-        
+        if (self.delegate && [self.delegate respondsToSelector:@selector(inPutViewDidSendMsg:)]) {
+            [self.delegate inPutViewDidSendMsg:textView.text];
+        }
+        self.isOpen = NO;
         [self.textView resignFirstResponder];
-        self.textView.text = prompt;
+        self.textView.text = self.prompt;
         self.textView.frame = CGRectMake(kLeftMargin,(bgViewHeight-kTextViewHeight)/2,screenWidth-2*kLeftMargin-kBtnWH*1.2, kTextViewHeight);
         self.frame = orginalFrame;
         curRow = 1;
@@ -131,13 +134,21 @@ static NSString *prompt = @"请输入评论内容";
     return YES;
 }
 
-- (void)hideKeyBoard
+- (void)getDownKeyBoard
 {
     [self.textView resignFirstResponder];
-    self.textView.text = prompt;
+    self.isOpen = NO;
+    self.textView.text = self.prompt;
     self.textView.frame = CGRectMake(kLeftMargin,(bgViewHeight-kTextViewHeight)/2,screenWidth-2*kLeftMargin-kBtnWH*1.2, kTextViewHeight);
     self.frame = orginalFrame;
     curRow = 1;
+}
+
+- (void)riseKeyBoard
+{
+    [self.textView becomeFirstResponder];
+    self.isOpen = YES;
+    self.textView.text = self.prompt;
 }
 
 - (void)clickEmjiBtn:(UIButton *)btn

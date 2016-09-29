@@ -8,13 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol InPutViewDelegate <NSObject>
+
+- (void)inPutViewDidSendMsg:(NSString *)message;
+
+@end
+
 typedef void(^SendMsgBlock)(NSString *);
 
 @interface InPutView : UIView<UITextViewDelegate>
 
 @property (nonatomic, strong) UITextView *textView;
 @property (nonatomic, copy) SendMsgBlock sendMsgBlock;
+@property (nonatomic, assign) BOOL isOpen;
+@property (nonatomic, strong) NSString *prompt;
+@property (nonatomic, assign) id<InPutViewDelegate>delegate;
 
-- (void)hideKeyBoard;
-
+- (void)riseKeyBoard;
+- (void)getDownKeyBoard;
 @end

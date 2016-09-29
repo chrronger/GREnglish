@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+//
 @interface GRAuthor : NSObject
 
 @property (nonatomic, assign) NSInteger ID;

@@ -93,13 +93,15 @@
     timeLabel.text = model.publishTime;
     contentLabel.text = model.content;
     deviceLabel.text = @"ios客户端";
-    likeBtn.selected = (model.licked == 0) ? NO : YES;
-    commonBtn.tag = 100 + self.row;
-    likeBtn.tag = 100 + self.row;
+   
     [likeBtn configButtonTitle:[NSString stringWithFormat:@"%ld",model.likeCount] fontSize:11 titleColor:UIColorFromRGB(0x505050)];
     likeBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -8);
+    likeBtn.tag = 100 + self.row;
+    
     [commonBtn configButtonTitle:[NSString stringWithFormat:@"%ld",model.commentCount] fontSize:11 titleColor:UIColorFromRGB(0x505050)];
     commonBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -8);
+    commonBtn.tag = 100 + self.row;
+    
     picContainerView.picUrlStringArr = model.images;
     picContainerView.sd_layout.topSpaceToView(contentLabel,5);
     
