@@ -50,9 +50,9 @@
 
     deviceLabel = [UILabel labelWithText:nil fontSize:13 textColor:UIColorFromRGB(0x505050) alignment:NSTextAlignmentLeft];
     
-    likeBtn = [UIButton buttonWithNormalImage:@"star_icon_normal" selectImage:nil imageType:btnImgTypeSmall target:self action:nil];
+    likeBtn = [UIButton buttonWithNormalImage:@"star_icon_normal" selectImage:@"dongtai_yizan" imageType:btnImgTypeSmall target:self action:@selector(clickLike:)];
     
-    commonBtn = [UIButton buttonWithNormalImage:@"comment_icon" selectImage:nil imageType:btnImgTypeSmall target:self action:nil];
+    commonBtn = [UIButton buttonWithNormalImage:@"comment_icon" selectImage:nil imageType:btnImgTypeSmall target:self action:@selector(clickCommont:)];
     
     NSArray *views = @[iconBtn,nameLabel,genderImgView,timeLabel,contentLabel,picContainerView,deviceLabel,likeBtn,commonBtn];
     [self.contentView sd_addSubviews:views];
@@ -81,18 +81,24 @@
 
 }
 
-- (void)setModel:(GRTweetModel *)model
+- (void)setModel:(GRTweetListModel *)model
 {
+    if (![model isKindOfClass:[GRTweetListModel class]]) {
+        return;
+    }
     _model = model;
     [iconBtn sd_setBackgroundImageWithURL:[NSURL URLWithString:model.author.avatar] forState:UIControlStateNormal];
     nameLabel.text = model.author.nickname;
-    genderImgView.image = (model.images.count > 0) ? [UIImage imageNamed:@"boy_dongtai"] : [UIImage imageNamed:@"girl_dongtai"];
+    genderImgView.image = (model.author.sex > 0) ? [UIImage imageNamed:@"boy_dongtai"] : [UIImage imageNamed:@"girl_dongtai"];
     timeLabel.text = model.publishTime;
     contentLabel.text = model.content;
     deviceLabel.text = @"ios客户端";
+    likeBtn.selected = (model.licked == 0) ? NO : YES;
+    commonBtn.tag = 100 + self.row;
+    likeBtn.tag = 100 + self.row;
     [likeBtn configButtonTitle:[NSString stringWithFormat:@"%ld",model.likeCount] fontSize:11 titleColor:UIColorFromRGB(0x505050)];
     likeBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -8);
-    [commonBtn configButtonTitle:[NSString stringWithFormat:@"%ld",model.likeCount] fontSize:11 titleColor:UIColorFromRGB(0x505050)];
+    [commonBtn configButtonTitle:[NSString stringWithFormat:@"%ld",model.commentCount] fontSize:11 titleColor:UIColorFromRGB(0x505050)];
     commonBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -8);
     picContainerView.picUrlStringArr = model.images;
     picContainerView.sd_layout.topSpaceToView(contentLabel,5);
@@ -100,7 +106,19 @@
     [self setupAutoHeightWithBottomView:deviceLabel bottomMargin:15];
 }
 
+- (void)clickLike:(UIButton *)btn
+{
+    btn.selected = !btn.selected;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(tweetListCellDidClickLikeAtIndex:)]) {
+        [self.delegate tweetListCellDidClickLikeAtIndex:btn.tag - 100];
+    }
+}
 
-
+- (void)clickCommont:(UIButton *)btn
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(tweetListCellDidClickCommontAtIndex:)]) {
+        [self.delegate tweetListCellDidClickCommontAtIndex:btn.tag - 100];
+    }
+}
 
 @end

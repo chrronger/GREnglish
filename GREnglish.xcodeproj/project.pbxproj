@@ -20,19 +20,22 @@
 		9A00B9881D87FB1A00184254 /* UITextField+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B97C1D87FB1A00184254 /* UITextField+Extension.m */; };
 		9A00B9891D87FB1A00184254 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B97E1D87FB1A00184254 /* UIView+Frame.m */; };
 		9A00B98E1D87FB7200184254 /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B98D1D87FB7200184254 /* UIColor+expanded.m */; };
+		9A226B821D9CB338009C69D8 /* InPutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A226B811D9CB338009C69D8 /* InPutView.m */; };
+		9A23AE4A1D9BA5E2004D2104 /* GRTweetDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23AE491D9BA5E2004D2104 /* GRTweetDetailController.m */; };
+		9A23AE4D1D9BAB1F004D2104 /* GRTweetCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23AE4C1D9BAB1F004D2104 /* GRTweetCommentModel.m */; };
+		9A23AE501D9BAE85004D2104 /* GRTweetDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23AE4F1D9BAE85004D2104 /* GRTweetDetailCell.m */; };
+		9A23AE531D9BAF85004D2104 /* GRAuthor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23AE521D9BAF85004D2104 /* GRAuthor.m */; };
 		9A56BFE81D9A235B00047A5F /* FGNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A56BFE71D9A235B00047A5F /* FGNetworking.m */; };
 		9A56BFEE1D9A508300047A5F /* Hud.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A56BFED1D9A508300047A5F /* Hud.m */; };
 		9A56BFF11D9A512E00047A5F /* UserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A56BFF01D9A512E00047A5F /* UserDefault.m */; };
-		9A8B91C81D9A570200B57AA1 /* GRTweetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8B91C71D9A570200B57AA1 /* GRTweetModel.m */; };
-		A637F42B1D9A6B9E00C41A8A /* GRAccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A637F42A1D9A6B9E00C41A8A /* GRAccountModel.m */; };
-		A651A12F1D9A7480007008AA /* Api.m in Sources */ = {isa = PBXBuildFile; fileRef = A651A12E1D9A7480007008AA /* Api.m */; };
+		9A8B91C81D9A570200B57AA1 /* GRTweetListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8B91C71D9A570200B57AA1 /* GRTweetListModel.m */; };
 		9A8B91CB1D9A68CB00B57AA1 /* GRTweetListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8B91CA1D9A68CB00B57AA1 /* GRTweetListCell.m */; };
 		9A8B91CE1D9A736800B57AA1 /* SDWeiXinPhotoContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8B91CD1D9A736800B57AA1 /* SDWeiXinPhotoContainerView.m */; };
 		9A8B91D71D9A73B000B57AA1 /* SDBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8B91D11D9A73B000B57AA1 /* SDBrowserImageView.m */; };
 		9A8B91D81D9A73B000B57AA1 /* SDPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8B91D31D9A73B000B57AA1 /* SDPhotoBrowser.m */; };
 		9A8B91D91D9A73B000B57AA1 /* SDWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8B91D61D9A73B000B57AA1 /* SDWaitingView.m */; };
-		A611A32D1D99212B004384AE /* GRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A611A32C1D99212B004384AE /* GRLoginViewController.m */; };
-
+		A637F42B1D9A6B9E00C41A8A /* GRAccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A637F42A1D9A6B9E00C41A8A /* GRAccountModel.m */; };
+		A651A12F1D9A7480007008AA /* Api.m in Sources */ = {isa = PBXBuildFile; fileRef = A651A12E1D9A7480007008AA /* Api.m */; };
 		A6A37D741D879BAB003CEAD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A37D731D879BAB003CEAD5 /* main.m */; };
 		A6A37D771D879BAB003CEAD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A37D761D879BAB003CEAD5 /* AppDelegate.m */; };
 		A6A37D7D1D879BAB003CEAD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6A37D7B1D879BAB003CEAD5 /* Main.storyboard */; };
@@ -107,20 +110,24 @@
 		9A00B98C1D87FB7200184254 /* UIColor+expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+expanded.h"; sourceTree = "<group>"; };
 		9A00B98D1D87FB7200184254 /* UIColor+expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+expanded.m"; sourceTree = "<group>"; };
 		9A00B98F1D87FC1E00184254 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		9A226B801D9CB338009C69D8 /* InPutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InPutView.h; sourceTree = "<group>"; };
+		9A226B811D9CB338009C69D8 /* InPutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InPutView.m; sourceTree = "<group>"; };
+		9A23AE481D9BA5E2004D2104 /* GRTweetDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRTweetDetailController.h; sourceTree = "<group>"; };
+		9A23AE491D9BA5E2004D2104 /* GRTweetDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRTweetDetailController.m; sourceTree = "<group>"; };
+		9A23AE4B1D9BAB1F004D2104 /* GRTweetCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRTweetCommentModel.h; sourceTree = "<group>"; };
+		9A23AE4C1D9BAB1F004D2104 /* GRTweetCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRTweetCommentModel.m; sourceTree = "<group>"; };
+		9A23AE4E1D9BAE85004D2104 /* GRTweetDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRTweetDetailCell.h; sourceTree = "<group>"; };
+		9A23AE4F1D9BAE85004D2104 /* GRTweetDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRTweetDetailCell.m; sourceTree = "<group>"; };
+		9A23AE511D9BAF85004D2104 /* GRAuthor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRAuthor.h; sourceTree = "<group>"; };
+		9A23AE521D9BAF85004D2104 /* GRAuthor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRAuthor.m; sourceTree = "<group>"; };
 		9A56BFE61D9A235B00047A5F /* FGNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGNetworking.h; sourceTree = "<group>"; };
 		9A56BFE71D9A235B00047A5F /* FGNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGNetworking.m; sourceTree = "<group>"; };
 		9A56BFEC1D9A508300047A5F /* Hud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hud.h; sourceTree = "<group>"; };
 		9A56BFED1D9A508300047A5F /* Hud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hud.m; sourceTree = "<group>"; };
 		9A56BFEF1D9A512E00047A5F /* userDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userDefault.h; sourceTree = "<group>"; };
 		9A56BFF01D9A512E00047A5F /* UserDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefault.m; sourceTree = "<group>"; };
-		9A8B91C61D9A570200B57AA1 /* GRTweetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRTweetModel.h; sourceTree = "<group>"; };
-		9A8B91C71D9A570200B57AA1 /* GRTweetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRTweetModel.m; sourceTree = "<group>"; };
-
-		A637F4291D9A6B9E00C41A8A /* GRAccountModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GRAccountModel.h; path = GREnglish/Application/Module/Profile/Controller/GRAccountModel.h; sourceTree = SOURCE_ROOT; };
-		A637F42A1D9A6B9E00C41A8A /* GRAccountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GRAccountModel.m; path = GREnglish/Application/Module/Profile/Controller/GRAccountModel.m; sourceTree = SOURCE_ROOT; };
-		A651A12D1D9A7480007008AA /* Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Api.h; sourceTree = "<group>"; };
-		A651A12E1D9A7480007008AA /* Api.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Api.m; sourceTree = "<group>"; };
-
+		9A8B91C61D9A570200B57AA1 /* GRTweetListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRTweetListModel.h; sourceTree = "<group>"; };
+		9A8B91C71D9A570200B57AA1 /* GRTweetListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRTweetListModel.m; sourceTree = "<group>"; };
 		9A8B91C91D9A68CB00B57AA1 /* GRTweetListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRTweetListCell.h; sourceTree = "<group>"; };
 		9A8B91CA1D9A68CB00B57AA1 /* GRTweetListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRTweetListCell.m; sourceTree = "<group>"; };
 		9A8B91CC1D9A736800B57AA1 /* SDWeiXinPhotoContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWeiXinPhotoContainerView.h; sourceTree = "<group>"; };
@@ -132,9 +139,10 @@
 		9A8B91D41D9A73B000B57AA1 /* SDPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowserConfig.h; sourceTree = "<group>"; };
 		9A8B91D51D9A73B000B57AA1 /* SDWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWaitingView.h; sourceTree = "<group>"; };
 		9A8B91D61D9A73B000B57AA1 /* SDWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWaitingView.m; sourceTree = "<group>"; };
-		A611A32B1D99212B004384AE /* GRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRLoginViewController.h; sourceTree = "<group>"; };
-		A611A32C1D99212B004384AE /* GRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRLoginViewController.m; sourceTree = "<group>"; };
-
+		A637F4291D9A6B9E00C41A8A /* GRAccountModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GRAccountModel.h; path = GREnglish/Application/Module/Profile/Controller/GRAccountModel.h; sourceTree = SOURCE_ROOT; };
+		A637F42A1D9A6B9E00C41A8A /* GRAccountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GRAccountModel.m; path = GREnglish/Application/Module/Profile/Controller/GRAccountModel.m; sourceTree = SOURCE_ROOT; };
+		A651A12D1D9A7480007008AA /* Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Api.h; sourceTree = "<group>"; };
+		A651A12E1D9A7480007008AA /* Api.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Api.m; sourceTree = "<group>"; };
 		A6A37D6F1D879BAB003CEAD5 /* GREnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GREnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6A37D731D879BAB003CEAD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A6A37D751D879BAB003CEAD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -310,8 +318,12 @@
 		9A8B91C41D9A56F500B57AA1 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				9A8B91C61D9A570200B57AA1 /* GRTweetModel.h */,
-				9A8B91C71D9A570200B57AA1 /* GRTweetModel.m */,
+				9A23AE511D9BAF85004D2104 /* GRAuthor.h */,
+				9A23AE521D9BAF85004D2104 /* GRAuthor.m */,
+				9A8B91C61D9A570200B57AA1 /* GRTweetListModel.h */,
+				9A8B91C71D9A570200B57AA1 /* GRTweetListModel.m */,
+				9A23AE4B1D9BAB1F004D2104 /* GRTweetCommentModel.h */,
+				9A23AE4C1D9BAB1F004D2104 /* GRTweetCommentModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -319,8 +331,12 @@
 		9A8B91C51D9A56F500B57AA1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9A226B801D9CB338009C69D8 /* InPutView.h */,
+				9A226B811D9CB338009C69D8 /* InPutView.m */,
 				9A8B91C91D9A68CB00B57AA1 /* GRTweetListCell.h */,
 				9A8B91CA1D9A68CB00B57AA1 /* GRTweetListCell.m */,
+				9A23AE4E1D9BAE85004D2104 /* GRTweetDetailCell.h */,
+				9A23AE4F1D9BAE85004D2104 /* GRTweetDetailCell.m */,
 				9A8B91CC1D9A736800B57AA1 /* SDWeiXinPhotoContainerView.h */,
 				9A8B91CD1D9A736800B57AA1 /* SDWeiXinPhotoContainerView.m */,
 			);
@@ -610,6 +626,8 @@
 			children = (
 				A6A37E4F1D87F8E2003CEAD5 /* GRTweetsViewController.h */,
 				A6A37E501D87F8E2003CEAD5 /* GRTweetsViewController.m */,
+				9A23AE481D9BA5E2004D2104 /* GRTweetDetailController.h */,
+				9A23AE491D9BA5E2004D2104 /* GRTweetDetailController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -834,12 +852,13 @@
 				A6A37E591D87F8E2003CEAD5 /* GRNavigationController.m in Sources */,
 
 				9A8B91D81D9A73B000B57AA1 /* SDPhotoBrowser.m in Sources */,
-
 				3A978D431D9B9E0100058210 /* GRHomeCell.m in Sources */,
+				9A23AE4A1D9BA5E2004D2104 /* GRTweetDetailController.m in Sources */,
 				9A00B9861D87FB1A00184254 /* UILabel+Extension.m in Sources */,
 				A6A37E5E1D87F8E2003CEAD5 /* GRTweetsViewController.m in Sources */,
 				A6A37E571D87F8E2003CEAD5 /* GRGrammarViewController.m in Sources */,
 				9A56BFEE1D9A508300047A5F /* Hud.m in Sources */,
+				9A23AE4D1D9BAB1F004D2104 /* GRTweetCommentModel.m in Sources */,
 				A6DA2A171D9B6D4A0076ADD4 /* GRForgotPswViewController.m in Sources */,
 				A6DA2A0D1D9B65120076ADD4 /* GRTextField.m in Sources */,
 				A6A37E581D87F8E2003CEAD5 /* GRHomeViewController.m in Sources */,
@@ -850,8 +869,9 @@
 				9A56BFF11D9A512E00047A5F /* UserDefault.m in Sources */,
 				9A8B91CE1D9A736800B57AA1 /* SDWeiXinPhotoContainerView.m in Sources */,
 				9A8B91D91D9A73B000B57AA1 /* SDWaitingView.m in Sources */,
-				9A8B91C81D9A570200B57AA1 /* GRTweetModel.m in Sources */,
+				9A8B91C81D9A570200B57AA1 /* GRTweetListModel.m in Sources */,
 				9A00B9891D87FB1A00184254 /* UIView+Frame.m in Sources */,
+				9A23AE501D9BAE85004D2104 /* GRTweetDetailCell.m in Sources */,
 				A6A37E5B1D87F8E2003CEAD5 /* GRTabBar.m in Sources */,
 				9A00B9821D87FB1A00184254 /* UIBarButtonItem+Extension.m in Sources */,
 				3A978D401D9A613F00058210 /* GRVideoModel.m in Sources */,
@@ -860,7 +880,9 @@
 				A6DA2A1A1D9B6DF30076ADD4 /* GRBaseLoginViewController.m in Sources */,
 				A6A37E5C1D87F8E2003CEAD5 /* GRProfileViewController.m in Sources */,
 				3A978D3A1D9A291900058210 /* GRAllCategoryModel.m in Sources */,
+				9A23AE531D9BAF85004D2104 /* GRAuthor.m in Sources */,
 				9A00B9871D87FB1A00184254 /* UITableView+Extension.m in Sources */,
+				9A226B821D9CB338009C69D8 /* InPutView.m in Sources */,
 				A637F42B1D9A6B9E00C41A8A /* GRAccountModel.m in Sources */,
 				A6A37D741D879BAB003CEAD5 /* main.m in Sources */,
 				A651A12F1D9A7480007008AA /* Api.m in Sources */,

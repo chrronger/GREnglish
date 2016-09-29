@@ -29,6 +29,7 @@
 #import "GRUrl.h"
 #import "Api.h"
 #import "GRAccountModel.h"
+#import "Config.h"
 
 //第三方库头文件
 #import "MJExtension.h"

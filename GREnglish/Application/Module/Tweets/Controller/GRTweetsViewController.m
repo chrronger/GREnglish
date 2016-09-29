@@ -7,10 +7,11 @@
 //
 
 #import "GRTweetsViewController.h"
-#import "GRTweetModel.h"
+#import "GRTweetListModel.h"
 #import "GRTweetListCell.h"
+#import "GRTweetDetailController.h"
 
-@interface GRTweetsViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface GRTweetsViewController ()<UITableViewDelegate,UITableViewDataSource,TweetListDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *tweetList;
@@ -18,7 +19,7 @@
 
 @implementation GRTweetsViewController
 {
-    TweetParm *parm;
+    TweetListParm *parm;
 }
 
 - (void)viewDidLoad {
@@ -32,7 +33,7 @@
 #pragma mark - Data
 - (void)setupParm
 {
-    parm = [[TweetParm alloc] init];
+    parm = [[TweetListParm alloc] init];
     parm.type = @"new";
     parm.page = @1;
     parm.count = @10;
@@ -60,26 +61,19 @@
     NSDictionary *parmDic = [parm mj_keyValues];
     [FGNetworking requsetWithPath:GET_TWEETS_LIST params:parmDic method:Get handleBlcok:^(id response, NSError *error) {
         if (response) {
-             //GRLog(@"%@", response[@"result"][@"data"]);
+             GRLog(@"%@", response[@"result"][@"data"]);
     
             [self.tableView.mj_header endRefreshing];
             [self.tableView.mj_footer endRefreshing];
             
-            [GRTweetModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
-                return @{@"ID":@"id"};
-            }];
-            [GRTweetModel mj_setupObjectClassInArray:^NSDictionary *{
-                return @{@"author":@"Author"};
-            }];
-            NSArray *dataArr = [GRTweetModel mj_objectArrayWithKeyValuesArray:response[@"result"][@"data"]];
+            NSArray *dataArr = [GRTweetListModel mj_objectArrayWithKeyValuesArray:response[@"result"][@"data"]];
            
-            for (GRTweetModel *model in dataArr) {
+            for (GRTweetListModel *model in dataArr) {
                 NSString *imgStr = [[model.images firstObject] objectForKey:@"href"];
                 model.images = (imgStr == nil) ? nil : @[imgStr];
             }
 
             [self.tweetList addObjectsFromArray:dataArr];
-            GRLog(@"%ld", self.tweetList.count);
             [self.tableView reloadData];
             
         }
@@ -88,6 +82,17 @@
         }
     }];
     
+}
+
+#pragma mark - TweetListDelegate
+- (void)tweetListCellDidClickLikeAtIndex:(NSInteger)index
+{
+    GRLog(@"点赞--%ld", index);
+}
+
+- (void)tweetListCellDidClickCommontAtIndex:(NSInteger)index
+{
+    GRLog(@"评论--%ld", index);
 }
 
 #pragma mark - UI
@@ -109,10 +114,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    GRTweetModel *model = self.tweetList[indexPath.row];
+    GRTweetListModel *model = self.tweetList[indexPath.row];
     GRTweetListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GRTweetListCell" forIndexPath:indexPath];
+    cell.row = indexPath.row;
     cell.model = model;
-   // [cell useCellFrameCacheWithIndexPath:indexPath tableView:tableView];
+    cell.delegate = self;
+    [cell useCellFrameCacheWithIndexPath:indexPath tableView:tableView];
     return cell;
 }
 
@@ -121,6 +128,14 @@
 {
     id model = self.tweetList[indexPath.row];
     return [tableView cellHeightForIndexPath:indexPath model:model keyPath:@"model" cellClass:[GRTweetListCell class] contentViewWidth:[self cellContentViewWith]];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.tabBarController.tabBar setHidden:YES];
+    GRTweetDetailController *detailCtl = [[GRTweetDetailController alloc] init];
+    detailCtl.model = self.tweetList[indexPath.row];
+    [self.navigationController pushViewController:detailCtl animated:YES];
 }
 
 - (CGFloat)cellContentViewWith
@@ -137,6 +152,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self.tabBarController.tabBar setHidden:NO];
     [self.tableView.mj_header beginRefreshing];
 }
 

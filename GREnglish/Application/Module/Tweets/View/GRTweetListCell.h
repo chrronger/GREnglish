@@ -7,9 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GRTweetModel.h"
+#import "GRTweetListModel.h"
+
+@protocol TweetListDelegate <NSObject>
+
+- (void)tweetListCellDidClickLikeAtIndex:(NSInteger)index;
+- (void)tweetListCellDidClickCommontAtIndex:(NSInteger)index;
+
+@end
 
 @interface GRTweetListCell : UITableViewCell
 
-@property (nonatomic, strong) GRTweetModel *model;
+@property (nonatomic, assign) id<TweetListDelegate> delegate;
+@property (nonatomic, strong) GRTweetListModel *model;
+@property (nonatomic, assign) NSInteger row;
 @end

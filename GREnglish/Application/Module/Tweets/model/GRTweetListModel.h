@@ -7,15 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GRAuthor.h"
 
-@interface Author : NSObject
 
-@property (nonatomic, assign) NSInteger ID;
-@property (nonatomic, copy) NSString *nickname;
-@property (nonatomic, copy) NSString *avatar;
-@end
-
-@interface GRTweetModel : NSObject
+@interface GRTweetListModel : NSObject
 
 @property (nonatomic, assign) NSInteger ID;
 @property (nonatomic, assign) NSInteger appClient;
@@ -24,12 +19,13 @@
 @property (nonatomic, assign) NSInteger likeCount;
 @property (nonatomic, assign) NSInteger licked;
 @property (nonatomic, copy)   NSString *publishTime;
-@property (nonatomic, strong) Author *author;
+@property (nonatomic, strong) GRAuthor *author;
 @property (nonatomic, strong) NSArray *images;
 @end
 
 
-@interface TweetParm : NSObject
+
+@interface TweetListParm : NSObject
 
 @property (nonatomic, copy)   NSString *type;
 @property (nonatomic, strong) NSNumber *page;
