@@ -45,7 +45,7 @@ static NSString *prompt = @"请输入评论内容";
     orginalFrame = self.frame;
     oneRowHeight = [prompt getHeightWithLimitWidth:screenWidth fontSize:17];//单行文本高度
     topSpace = (kTextViewHeight-oneRowHeight)/2;
-    self.backgroundColor = Color(230, 230, 230, 1);
+    self.backgroundColor = RGBColor(230, 230, 230, 1);
     
     self.textView = [[UITextView alloc] initWithFrame:CGRectMake(kLeftMargin,(bgViewHeight-kTextViewHeight)/2,screenWidth-2*kLeftMargin-kBtnWH*1.2, kTextViewHeight)];
     self.textView.delegate = self;

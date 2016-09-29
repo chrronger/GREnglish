@@ -30,6 +30,7 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
+  - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
@@ -59,6 +60,7 @@ DEPENDENCIES:
   - AFNetworking
   - ASIHTTPRequest (~> 1.8.2)
   - FMDB
+  - Masonry
   - MBProgressHUD
   - MJExtension (~> 3.0.13)
   - MJRefresh
@@ -77,6 +79,7 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   ASIHTTPRequest: ec013992946676b7978dcbde6396d57312d21db4
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
@@ -90,10 +93,6 @@ SPEC CHECKSUMS:
   YYImage: 362f44ffba1fc498f2152060f3bb54ed84600981
   YYWebImage: 8da75a611fd0d2e0f58a273f9ca0bc731614cb0d
 
-<<<<<<< Updated upstream
-PODFILE CHECKSUM: 5275bfa6d3a9712b60b51c5656cb4cc91ad0a888
-=======
-PODFILE CHECKSUM: 1ba2ed7fea0a2bc056b52da944adaffaa2059eff
->>>>>>> Stashed changes
+PODFILE CHECKSUM: cd74886616ed2acd643305650c25e63291f4018f
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.0.beta.2

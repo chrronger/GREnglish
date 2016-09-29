@@ -836,7 +836,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -850,7 +850,6 @@
 				A6A37E5D1D87F8E2003CEAD5 /* GRPublishViewController.m in Sources */,
 				A6A37D771D879BAB003CEAD5 /* AppDelegate.m in Sources */,
 				A6A37E591D87F8E2003CEAD5 /* GRNavigationController.m in Sources */,
-
 				9A8B91D81D9A73B000B57AA1 /* SDPhotoBrowser.m in Sources */,
 				3A978D431D9B9E0100058210 /* GRHomeCell.m in Sources */,
 				9A23AE4A1D9BA5E2004D2104 /* GRTweetDetailController.m in Sources */,
