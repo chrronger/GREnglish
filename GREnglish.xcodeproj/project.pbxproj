@@ -58,6 +58,7 @@
 		A6DA2A141D9B6D100076ADD4 /* GRRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DA2A121D9B6D100076ADD4 /* GRRegisterViewController.m */; };
 		A6DA2A171D9B6D4A0076ADD4 /* GRForgotPswViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DA2A161D9B6D4A0076ADD4 /* GRForgotPswViewController.m */; };
 		A6DA2A1A1D9B6DF30076ADD4 /* GRBaseLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DA2A191D9B6DF30076ADD4 /* GRBaseLoginViewController.m */; };
+		A6DE54511D9CFB06004B1B57 /* GRTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DE54501D9CFB06004B1B57 /* GRTextView.m */; };
 		D5582C0FEE1584325CE0C3C2 /* Pods_GREnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE328CC0C92963C592C3869 /* Pods_GREnglish.framework */; };
 /* End PBXBuildFile section */
 
@@ -188,6 +189,8 @@
 		A6DA2A161D9B6D4A0076ADD4 /* GRForgotPswViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRForgotPswViewController.m; sourceTree = "<group>"; };
 		A6DA2A181D9B6DF30076ADD4 /* GRBaseLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRBaseLoginViewController.h; sourceTree = "<group>"; };
 		A6DA2A191D9B6DF30076ADD4 /* GRBaseLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRBaseLoginViewController.m; sourceTree = "<group>"; };
+		A6DE544F1D9CFB06004B1B57 /* GRTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GRTextView.h; path = GREnglish/Application/Module/Profile/Controller/Login/GRTextView.h; sourceTree = SOURCE_ROOT; };
+		A6DE54501D9CFB06004B1B57 /* GRTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GRTextView.m; path = GREnglish/Application/Module/Profile/Controller/Login/GRTextView.m; sourceTree = SOURCE_ROOT; };
 		D8AFF454EF23EFA05AB27714 /* Pods-GREnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GREnglish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GREnglish/Pods-GREnglish.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -607,6 +610,8 @@
 		A6A37E4C1D87F8E2003CEAD5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A6DE544F1D9CFB06004B1B57 /* GRTextView.h */,
+				A6DE54501D9CFB06004B1B57 /* GRTextView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -871,6 +876,7 @@
 				9A8B91C81D9A570200B57AA1 /* GRTweetListModel.m in Sources */,
 				9A00B9891D87FB1A00184254 /* UIView+Frame.m in Sources */,
 				9A23AE501D9BAE85004D2104 /* GRTweetDetailCell.m in Sources */,
+				A6DE54511D9CFB06004B1B57 /* GRTextView.m in Sources */,
 				A6A37E5B1D87F8E2003CEAD5 /* GRTabBar.m in Sources */,
 				9A00B9821D87FB1A00184254 /* UIBarButtonItem+Extension.m in Sources */,
 				3A978D401D9A613F00058210 /* GRVideoModel.m in Sources */,

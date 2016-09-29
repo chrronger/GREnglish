@@ -36,6 +36,7 @@
 #import "SDAutoLayout.h"
 #import "MJRefresh.h"
 #import "UIImageView+WebCache.h"
+#import "Masonry.h"
 
 #endif
 

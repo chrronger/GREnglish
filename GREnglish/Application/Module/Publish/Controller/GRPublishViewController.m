@@ -9,6 +9,8 @@
 #import "GRPublishViewController.h"
 
 @interface GRPublishViewController ()
+@property(nonatomic,strong)UITextView *textView;
+@property(nonatomic,strong)UIToolbar *toolBar;
 
 @end
 
@@ -25,14 +27,25 @@
 {
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"来一发";
+    
+    [self setNavBar];
+    [self setTextView];
+    
+}
+
+- (void)setTextView
+{
+    
+}
+
+- (void)setNavBar
+{
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(didCancel)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"发送" style:UIBarButtonItemStylePlain target:self action:@selector(didSend)];
     self.navigationItem.rightBarButtonItem.enabled = NO;
     [self.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
     
     [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithRed:0.95 green:0.98 blue:1 alpha:1]} forState:UIControlStateNormal];
-    
-    
 }
 
 #pragma mark - action
@@ -50,6 +63,10 @@
 {
     
 }
+
+#pragma mark - lazy
+
+
 
 #pragma mark - dealloc
 - (void)dealloc
