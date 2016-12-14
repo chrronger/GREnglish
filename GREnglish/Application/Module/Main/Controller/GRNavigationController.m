@@ -52,6 +52,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*//push 修改默认返回按钮
+  - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
+ -    if (viewController.childViewControllers.count > 0) {
+ -        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonItemWithImage:@"top_navigation_back_normal" selectedImage:@"top_navigation_back_normal" target:self action:@selector(didClickback)];
+ +    if (self.childViewControllers.count > 0) {
+ +        //viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonItemWithImage:@"top_navigation_back_normal" selectedImage:@"top_navigation_back_normal" target:self action:@selector(didClickback)];
+ +        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed: @"top_navigation_back_normal"] style:UIBarButtonItemStylePlain target:self action:@selector(didClickback)];
+          
+          viewController.hidesBottomBarWhenPushed = YES;
+      } else {
+ @@ -44,7 +45,7 @@ - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)ani
+  }
+  - (void)didClickback
+  {
+ -    [self.navigationController popViewControllerAnimated:YES];
+ +    [self popViewControllerAnimated:YES];
+  }
+  */
 
 
 @end
